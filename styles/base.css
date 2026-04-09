@@ -1,0 +1,97 @@
+/* =====================================================
+   BASE.CSS - Variables, Reset y Estilos Globales
+   ===================================================== */
+
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Variables CSS - Paleta de Colores */
+:root {
+    --color-primario: #0e141b;
+    --color-secundario: #1a1f25;
+    --color-resaltado: #e63946;
+    --color-texto: #ffffff;
+    --color-gris: #aaaaaa;
+    
+    /* Espaciados */
+    --padding-seccion: 60px 20px;
+    --border-radius: 10px;
+    --border-radius-lg: 15px;
+    
+    /* Transiciones */
+    --transicion: 0.3s ease;
+    --transicion-hover: all 0.3s ease;
+    
+    /* Sombras */
+    --sombra-suave: 0 4px 15px rgba(255, 255, 255, 0.05);
+    --sombra-hover: 0px 6px 20px rgba(230, 57, 70, 0.3);
+}
+
+/* Estilos base del body */
+body {
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+}
+
+/* Estilos base para secciones */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--padding-seccion);
+}
+
+/* Colores de fondo por sección */
+#inicio { background-color: var(--color-secundario); }
+#sobre-mi { background-color: var(--color-primario); }
+#proyectos { background-color: var(--color-secundario); }
+#contacto { background-color: var(--color-primario); }
+
+/* Títulos de sección reutilizables */
+.titulo-seccion {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-resaltado);
+    margin: 8px 0 0;
+    border-radius: 2px;
+}
+
+/* Animaciones globales */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Clases de utilidad */
+.resaltado {
+    color: var(--color-resaltado);
+    font-weight: bold;
+}
+
+.cursor-parpadeo {
+    display: inline-block;
+    margin-left: 0px;
+    animation: blink 1s step-start infinite;
+    color: var(--color-gris);
+    font-weight: bold;
+}

@@ -1,0 +1,419 @@
+/* =====================================================
+   RESPONSIVE.CSS - Media Queries y Diseño Responsivo
+   ===================================================== */
+
+/* ===== LAPTOPS Y TABLETS GRANDES (1200px y menor) ===== */
+@media (max-width: 1200px) {
+    /* Navbar */
+    .navbar-contenedor {
+        max-width: 90%;
+        column-gap: 100px;
+        padding: 0 20px;
+    }
+    
+    /* Inicio */
+    .inicio-contenedor {
+        width: 80%;
+    }
+    
+    .imagen-inicio img {
+        width: 300px;
+    }
+    
+    /* Sobre Mí */
+    .contenedor-sobre-mi {
+        max-width: 90%;
+    }
+    
+    .habilidades-contenedor {
+        max-width: 100%;
+    }
+}
+
+/* ===== TABLETS (1024px y menor) ===== */
+@media (max-width: 1024px) {
+    /* Navbar */
+    .navbar-contenedor {
+        column-gap: 50px;
+    }
+    
+    .nav-links {
+        gap: 30px;
+    }
+    
+    /* Inicio */
+    .inicio-contenedor {
+        width: 85%;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .texto-inicio h1 {
+        font-size: 2.2em;
+    }
+    
+    .imagen-inicio img {
+        width: 280px;
+    }
+    
+    /* Sobre Mí */
+    .tarjetas-sobre-mi {
+        gap: 20px;
+    }
+    
+    .tarjeta {
+        width: 300px;
+    }
+    
+    .habilidades-linea {
+        gap: 20px;
+    }
+    
+    /* Proyectos */
+    .contenedor-proyectos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        align-items: stretch;
+    }
+    
+    /* Contacto */
+    .contacto-contenedor {
+        gap: 2rem;
+    }
+    
+    .contacto-izquierda {
+        padding-right: 1rem;
+    }
+}
+
+/* ===== TABLETS PEQUEÑAS (768px y menor) ===== */
+@media (max-width: 768px) {
+    /* Navegación */
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .navbar-contenedor {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        gap: 25px;
+        order: 2;
+    }
+    
+    .nav-derecha {
+        order: 3;
+        justify-content: center;
+    }
+    
+    /* Secciones generales */
+    .section {
+        padding: 40px 15px;
+    }
+    
+    /* Inicio */
+    .inicio-contenedor {
+        flex-direction: column;
+        width: 95%;
+        gap: 2.5rem;
+        text-align: center;
+    }
+    
+    .texto-inicio h1 {
+        font-size: 1.8em;
+    }
+    
+    .texto-inicio h2 {
+        font-size: 1.4em;
+    }
+    
+    .imagen-inicio img {
+        width: 220px;
+    }
+    
+    .botones {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Sobre Mí */
+    .contenedor-sobre-mi {
+        padding: 0 10px;
+    }
+    
+    .titulo-seccion,
+    .titulo-contacto {
+        font-size: 1.8em;
+        text-align: center;
+    }
+    
+    .tarjetas-sobre-mi {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .tarjeta {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+    
+    .habilidades-linea {
+        gap: 15px;
+    }
+    
+    .habilidad-card {
+        width: 110px;
+        padding: 15px;
+    }
+    
+    /* Proyectos */
+    .contenedor-proyectos {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
+        align-items: stretch;
+    }
+    
+    .proyecto-botones {
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .boton-proyecto {
+        min-width: 120px;
+        font-size: 0.9rem;
+    }
+    
+    /* Contacto */
+    .contacto-contenedor {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contacto-izquierda {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .descripcion-contacto {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .redes-sociales-iconos {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .contacto-formulario {
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+/* ===== MÓVILES (480px y menor) ===== */
+@media (max-width: 480px) {
+    /* Navegación */
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .navbar-contenedor {
+        padding: 0 10px;
+        gap: 10px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+    
+    .nav-derecha img {
+        width: 22px;
+    }
+    
+    /* Secciones generales */
+    .section {
+        padding: 30px 10px;
+        min-height: 100vh;
+    }
+    
+    /* Inicio */
+    .inicio-contenedor {
+        width: 100%;
+        gap: 2rem;
+    }
+    
+    .texto-inicio h1 {
+        font-size: 1.6em;
+        line-height: 1.2;
+    }
+    
+    .texto-inicio h2 {
+        font-size: 1.2em;
+    }
+    
+    .imagen-inicio img {
+        width: 180px;
+    }
+    
+    .botones {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .botones img {
+        width: 35px;
+    }
+    
+    .boton-cv {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    /* Sobre Mí */
+    .contenedor-sobre-mi {
+        padding: 0 5px;
+    }
+    
+    .titulo-seccion,
+    .titulo-contacto {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    .tarjeta {
+        padding: 15px;
+        margin: 0 5px;
+    }
+    
+    .habilidades-contenedor {
+        padding: 20px 10px;
+        margin-top: 20px;
+    }
+    
+    .habilidades-linea {
+        gap: 10px;
+    }
+    
+    .habilidad-card {
+        width: 90px;
+        padding: 12px;
+    }
+    
+    .habilidad-card img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Proyectos */
+    .contenedor-proyectos {
+        gap: 1rem;
+        padding: 0 5px;
+    }
+    
+    .proyecto-contenido {
+        padding: 1rem;
+    }
+    
+    .proyecto-contenido h3 {
+        font-size: 1rem;
+    }
+    
+    .proyecto-botones {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .boton-proyecto {
+        min-width: auto;
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+    
+    /* Contacto */
+    .contacto-contenedor {
+        gap: 2rem;
+    }
+    
+    .descripcion-contacto {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    .redes-sociales-iconos {
+        gap: 1rem;
+    }
+    
+    .red-social-icono img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .contacto-formulario {
+        padding: 1.2rem;
+    }
+    
+    .form-grupo {
+        margin-bottom: 1rem;
+    }
+    
+    .form-grupo input,
+    .form-grupo textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .boton-enviar {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== MÓVILES MUY PEQUEÑOS (360px y menor) ===== */
+@media (max-width: 360px) {
+    .section {
+        padding: 25px 8px;
+    }
+    
+    .texto-inicio h1 {
+        font-size: 1.4em;
+    }
+    
+    .imagen-inicio img {
+        width: 150px;
+    }
+    
+    .tarjeta {
+        margin: 0 2px;
+    }
+    
+    .habilidad-card {
+        width: 80px;
+        padding: 10px;
+    }
+    
+    .contacto-formulario {
+        padding: 1rem;
+    }
+    
+    .red-social-icono img {
+        width: 28px;
+        height: 28px;
+    }
+}

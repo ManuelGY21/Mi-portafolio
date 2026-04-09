@@ -1,0 +1,152 @@
+/* =====================================================
+   CONTACTO.CSS - Estilos de la Sección Contacto
+   ===================================================== */
+
+#contacto {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primario);
+    padding: 20px;
+    justify-content: center;
+}
+
+/* ===== TÍTULO ESPECIAL ===== */
+.titulo-contacto {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-contacto::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-resaltado);
+    margin: 8px 0 0;
+    border-radius: 2px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.contacto-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* ===== LADO IZQUIERDO ===== */
+.contacto-izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.descripcion-contacto {
+    color: var(--color-gris);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* ===== ÍCONOS DE REDES SOCIALES ===== */
+.redes-sociales-iconos {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+.red-social-icono {
+    display: inline-block;
+    transition: var(--transicion-hover);
+}
+
+.red-social-icono img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+    transition: var(--transicion-hover);
+}
+
+.red-social-icono:hover img {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2000%) hue-rotate(340deg) brightness(90%) contrast(90%);
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+.contacto-formulario {
+    background: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #444;
+    height: fit-content;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ===== CAMPOS DEL FORMULARIO ===== */
+.form-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #2a3441;
+    border: 2px solid #3a4a5c;
+    border-radius: 8px;
+    color: var(--color-texto);
+    font-size: 1rem;
+    transition: border-color var(--transicion);
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-resaltado);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #8a9ba8;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 200px;
+}
+
+/* ===== BOTÓN DE ENVIAR ===== */
+.boton-enviar {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--color-resaltado), #c41e3a);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.boton-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+    background: linear-gradient(135deg, #c41e3a, #a91e2c);
+}

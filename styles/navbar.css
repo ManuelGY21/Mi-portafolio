@@ -1,0 +1,96 @@
+/* =====================================================
+   NAVBAR.CSS - Estilos de la Barra de Navegación
+   ===================================================== */
+
+.navbar {
+    background-color: #0e141b;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+/* Contenedor de la navbar */
+.navbar-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: 190px;
+    padding: 0 40px;
+}
+
+/* ===== LOGO ===== */
+.nav-izquierda .logo {
+    color: var(--color-resaltado);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-izquierda .logo span {
+    color: white;
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 0;
+    transition: color var(--transicion);
+}
+
+/* Efecto de línea animada bajo los enlaces */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-resaltado);
+    transform: scaleX(0);
+    transition: transform var(--transicion);
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:hover {
+    color: var(--color-resaltado);
+}
+
+/* ===== REDES SOCIALES EN NAVBAR ===== */
+.nav-derecha {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-derecha img {
+    width: 25px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: transform var(--transicion);
+}
+
+.nav-derecha img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2000%) hue-rotate(340deg) brightness(90%) contrast(90%);
+}

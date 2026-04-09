@@ -1,0 +1,76 @@
+/* =====================================================
+   INICIO.CSS - Estilos de la Sección de Inicio
+   ===================================================== */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secundario);
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.inicio-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    max-width: 1100px;
+}
+
+/* ===== TEXTO DE PRESENTACIÓN ===== */
+.texto-inicio h1 {
+    font-size: 2.5em;
+}
+
+.texto-inicio h2 {
+    font-size: 1.8em;
+    color: var(--color-gris);
+}
+
+/* ===== BOTÓN DE CURRICULUM ===== */
+.boton-cv {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-resaltado);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color var(--transicion);
+}
+
+.boton-cv:hover {
+    background-color: var(--color-resaltado);
+}
+
+/* ===== BOTONES DE REDES SOCIALES ===== */
+.botones {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.botones img {
+    width: 40px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    transition: var(--transicion-hover);
+}
+
+.botones img:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2000%) hue-rotate(340deg) brightness(90%) contrast(90%);
+}
+
+/* ===== IMAGEN DE PERFIL ===== */
+.imagen-inicio img {
+    width: 340px;
+    border-radius: 46%;
+}
