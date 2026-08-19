@@ -21,13 +21,24 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#inicio" data-i18n="navInicio">Inicio</a></li>
+            <li><a href="#sobre-mi" data-i18n="navSobreMi">Sobre Mí</a></li>
+            <li><a href="#experiencia" data-i18n="navExperiencia">Experiencia</a></li>
+            <li><a href="#proyectos" data-i18n="navProyectos">Proyectos</a></li>
+            <li><a href="#contacto" data-i18n="navContacto">Contacto</a></li>
         </ul>
 
         <div class="nav-derecha">
+            <div class="selector-idioma" aria-label="Selector de idioma">
+                <button type="button" class="idioma-toggle" aria-expanded="false" aria-haspopup="listbox">
+                    <span class="idioma-codigo">ES</span>
+                    <span class="idioma-flecha" aria-hidden="true">⌄</span>
+                </button>
+                <div class="idioma-opciones" role="listbox">
+                    <button type="button" data-lang="es" role="option">Español</button>
+                    <button type="button" data-lang="en" role="option">English</button>
+                </div>
+            </div>
             <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank">
                 <img src="images/linkedin.png" alt="LinkedIn">
             </a>
@@ -44,9 +55,10 @@
     <section id="inicio">
         <div class="inicio-contenedor">
             <div class="texto-inicio">
-                <h1><span class="hi">Hi,</span> <br> I'm <span class="resaltado">Manuel</span></h1>
-                <h2>Student System Engineer<span class="cursor-parpadeo">|</span></h2>
-                <a href="images/MANUEL SEBASTIAN GONZALES YACTAYO - currículum vítae.pdf" class="boton-cv" target="_blank">Curriculum</a>
+                <h1><span class="hi" data-i18n="saludo">Hi,</span> <br> <span data-i18n="soy">I'm</span> <span class="resaltado">Manuel</span></h1>
+                <h2 data-i18n="puestoPrincipal">Student Information Systems Engineer<span class="cursor-parpadeo">|</span></h2>
+                <div class="estado-laboral"><span class="estado-punto"></span><span data-i18n="estadoLaboral">Actualmente trabajando</span></div>
+                <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf" class="boton-cv" target="_blank" data-i18n="curriculum">Curriculum</a>
                 <div class="botones">
                     <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
                     <a href="https://github.com/ManuelGY21" target="_blank"><img src="images/github.png" alt="GitHub"></a>
@@ -54,41 +66,66 @@
                 </div>
             </div>
             <div class="imagen-inicio">
-                <img src="images/perfil.jpg" alt="Foto de perfil">
+                <div class="foto-marco">
+                    <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales">
+                </div>
+                <p class="foto-caption" data-i18n="fotoCaption">Ingeniero de Sistemas en formación</p>
             </div>
         </div>
     </section>
 
     <section id="sobre-mi">
         <div class="contenedor-sobre-mi">
-        <h2 class="titulo-seccion">Sobre Mí</h2>
+        <h2 class="titulo-seccion" data-i18n="sobreMiTitulo">Sobre Mí</h2>
 
         <!-- Tarjetas superiores -->
         <div class="tarjetas-sobre-mi">
             <div class="tarjeta">
-        <h3><img src="images/quiensoy.png" alt="¿Quién Soy?" class="tarjeta-icono"> ¿Quién Soy?</h3>
+        <h3><img src="images/quiensoy.png" alt="¿Quién Soy?" class="tarjeta-icono"> <span data-i18n="quienSoyTitulo">¿Quién Soy?</span></h3>
         <p>
-            Estudiante de 8vo ciclo de Ingeniería de Sistemas en la UPC con enfoque en ciberseguridad, desarrollo de software y gestión de infraestructura TI. Apasionado por resolver problemas técnicos complejos y trabajar en entornos colaborativos.
+            <span data-i18n="quienSoyTexto">Estudiante de octavo ciclo de Ingeniería de Sistemas de Información en la UPC, orientado a soporte técnico, infraestructura y ciberseguridad.</span>
         </p>
     </div>
 
     <div class="tarjeta">
-        <h3><img src="images/cohete.png" alt="Mi Objetivo" class="tarjeta-icono"> Mi Objetivo</h3>
+        <h3><img src="images/cohete.png" alt="Mi Objetivo" class="tarjeta-icono"> <span data-i18n="objetivoTitulo">Mi Objetivo</span></h3>
         <p>
-            Crecer profesionalmente aplicando mis conocimientos en ciberseguridad, desarrollo backend y administración de infraestructura TI. Participar en proyectos innovadores que generen impacto.
+            <span data-i18n="objetivoTexto">Desarrollarme en soporte TI, infraestructura y ciberseguridad, aportando soluciones técnicas que generen impacto.</span>
         </p>
     </div>
 
     <div class="tarjeta">
-        <h3><img src="images/cubo.png" alt="Mi Perfil" class="tarjeta-icono"> Mi Perfil</h3>
+        <h3><img src="images/cubo.png" alt="Mi Perfil" class="tarjeta-icono"> <span data-i18n="perfilTitulo">Mi Perfil</span></h3>
         <p>
-            Soy una persona adaptable, responsable y detallista. Me comprometo con cada proyecto para entregar resultados de alta calidad.
+            <span data-i18n="perfilTexto">Cuento con formación en diagnóstico de incidencias, Windows, Linux, redes TCP/IP, gestión de usuarios y fundamentos de ITSM.</span>
         </p>
     </div>
         </div>
 
+            <div class="certificaciones-seccion">
+                <div class="seccion-etiqueta" data-i18n="certificadosEtiqueta">Certificados</div>
+                <div class="certificaciones-lista">
+                    <article class="certificacion-item">
+                        <h4 data-i18n="certificadoUno">Microsoft Certified: SQL AI Developer Associate</h4>
+                        <p class="certificacion-fecha">Microsoft · 2026</p>
+                    </article>
+                    <article class="certificacion-item">
+                        <h4 data-i18n="certificadoDos">IBM IT Support Professional Certificate</h4>
+                        <p class="certificacion-fecha">IBM / Coursera · 2026</p>
+                    </article>
+                    <article class="certificacion-item">
+                        <h4 data-i18n="certificadoTres">Google IT Support Professional Certificate</h4>
+                        <p class="certificacion-fecha">Google / Coursera · 2026</p>
+                    </article>
+                    <article class="certificacion-item">
+                        <h4 data-i18n="certificadoCuatro">Google Cybersecurity Professional Certificate</h4>
+                        <p class="certificacion-fecha">Google / Coursera · 2025</p>
+                    </article>
+                </div>
+            </div>
+
         <div class="habilidades-contenedor">
-    <h2 class="titulo-habilidades">Mis Habilidades Técnicas</h2>
+    <h2 class="titulo-habilidades" data-i18n="habilidadesTitulo">Mis Habilidades Técnicas</h2>
     <div class="habilidades-linea">
         <div class="habilidad-card">
             <img src="images/Cmasmas.png" alt="C++">
@@ -111,9 +148,86 @@
     </div>
 </section>
 
+    <section id="experiencia">
+        <div class="contenedor-experiencia">
+            <h2 class="titulo-seccion experiencia-titulo" data-i18n="experienciaTitulo">Experiencia</h2>
+            <div class="experiencias-contenedor">
+                <div class="experiencia-seccion">
+                    <div class="experiencia-cabecera">
+                        <div class="seccion-etiqueta" data-i18n="experienciaLaboralEtiqueta">Experiencia laboral</div>
+                        <h3 data-i18n="experienciaPuesto">Prácticas profesionales</h3>
+                        <div class="experiencia-detalle">
+                            <div class="experiencia-identidad">
+                                <div class="experiencia-logo" aria-label="Espacio para logo o foto"></div>
+                                <div>
+                                    <strong data-i18n="experienciaEmpresa">Soporte TI e Infraestructura</strong>
+                                    <span data-i18n="experienciaFecha">Actualmente trabajando</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experiencia-tecnologias"><span>Windows</span><span>Linux</span><span>TCP/IP</span><span>ITSM</span></div>
+                    </div>
+                    <div class="experiencia-contenido">
+                        <ul class="experiencia-lista">
+                            <li data-i18n="experienciaUno">Diagnóstico de incidencias de hardware y software, soporte a usuarios y resolución de problemas técnicos.</li>
+                            <li data-i18n="experienciaDos">Administración básica de sistemas Windows y Linux, redes TCP/IP y gestión de usuarios.</li>
+                            <li data-i18n="experienciaTres">Aplicación de fundamentos de ciberseguridad, ITSM y buenas prácticas de infraestructura.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experiencia-seccion">
+                    <div class="experiencia-cabecera">
+                        <div class="seccion-etiqueta" data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</div>
+                        <h3 data-i18n="experienciaAcademicaUnoPuesto">Misión Universitaria de Ciberseguridad con IA</h3>
+                        <div class="experiencia-detalle">
+                            <div class="experiencia-identidad">
+                                <div class="experiencia-logo" aria-label="Espacio para logo o foto"></div>
+                                <div>
+                                    <strong>Instituto Tecnológico de Buenos Aires (ITBA), Argentina</strong>
+                                    <span>2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experiencia-tecnologias"><span>SIEM</span><span>Elastic Stack</span><span>Python</span><span>SOAR</span></div>
+                    </div>
+                    <div class="experiencia-contenido">
+                        <ul class="experiencia-lista">
+                            <li data-i18n="experienciaAcademicaUnoTexto">Desarrollé conocimientos en diseño y operación de un SOC moderno, análisis de logs y procesamiento de datos con Python.</li>
+                            <li data-i18n="experienciaAcademicaUnoTextoDos">Apliqué inteligencia artificial y modelos de lenguaje para el análisis de incidentes, detección de amenazas y automatización.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experiencia-seccion">
+                    <div class="experiencia-cabecera">
+                        <div class="seccion-etiqueta" data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</div>
+                        <h3 data-i18n="experienciaAcademicaDosPuesto">Misión Universitaria de Ciberseguridad e IoT</h3>
+                        <div class="experiencia-detalle">
+                            <div class="experiencia-identidad">
+                                <div class="experiencia-logo" aria-label="Espacio para logo o foto"></div>
+                                <div>
+                                    <strong>Universidad de los Andes, Colombia</strong>
+                                    <span>2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="experiencia-tecnologias"><span>IoT</span><span>Networks</span><span>Cybersecurity</span></div>
+                    </div>
+                    <div class="experiencia-contenido">
+                        <ul class="experiencia-lista">
+                            <li data-i18n="experienciaAcademicaDosTexto">Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras para proteger datos y comunicaciones.</li>
+                            <li data-i18n="experienciaAcademicaDosTextoDos">Desarrollé soluciones IoT aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="proyectos">
         <div class="contenedor-sobre-mi">
-            <h2 class="titulo-seccion">Mis Proyectos</h2>
+            <h2 class="titulo-seccion" data-i18n="proyectosTitulo">Mis Proyectos</h2>
             
             <div class="contenedor-proyectos">
                 <div class="proyecto-card">
@@ -121,19 +235,19 @@
                         <img src="images/proyecto1.png" alt="Foto">
                     </div>
                     <div class="proyecto-contenido">
-                        <h3>Realidad aumentada para diseñar ciudades sostenibles</h3>
+                        <h3 data-i18n="proyectoUnoTitulo">Realidad aumentada para diseñar ciudades sostenibles</h3>
                         <div class="tecnologias">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
-                        <p>La aplicación ProyectVision fue creada para transformar la forma en que se llevan a cabo los proyectos urbanos. En un mundo en constante evolución, la necesidad de herramientas innovadoras se vuelve cada vez más crucial. </p>
+                        <p data-i18n="proyectoUnoTexto">La aplicación ProyectVision fue creada para transformar la forma en que se llevan a cabo los proyectos urbanos. En un mundo en constante evolución, la necesidad de herramientas innovadoras se vuelve cada vez más crucial.</p>
                         <div class="proyecto-botones">
                             <a href="https://github.com/ManuelGY21/ProyectVision" class="boton-proyecto" target="_blank">
-                                <img src="images/github.png" alt="GitHub"> Ver Código
+                                <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
                             <a href="https://manuelgy21.github.io/ProyectVision/" class="boton-proyecto demo" target="_blank">
-                                <img src="images/demo.png" alt="Demo"> Ver Demo
+                                <img src="images/demo.png" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
                     </div>
@@ -144,19 +258,19 @@
                         <img src="images/proyecto2.png" alt="Foto">
                     </div>
                     <div class="proyecto-contenido">
-                        <h3>Buffet de Abogados</h3>
+                        <h3 data-i18n="proyectoDosTitulo">Buffet de Abogados</h3>
                         <div class="tecnologias">
                             <span class="tech-tag">C#</span>
                             <span class="tech-tag">SQL Server</span>
                             <span class="tech-tag">.NET</span>
                         </div>
-                        <p>LexiConnect es una plataforma integral diseñada para optimizar la gestión y administración de bufetes de abogados. Su objetivo es centralizar la información legal, facilitar el seguimiento de casos y mejorar la comunicación y conexión entre los profesionales del derecho y sus clientes.</p>
+                        <p data-i18n="proyectoDosTexto">LexiConnect es una plataforma integral diseñada para optimizar la gestión y administración de bufetes de abogados. Su objetivo es centralizar la información legal, facilitar el seguimiento de casos y mejorar la comunicación entre profesionales y clientes.</p>
                         <div class="proyecto-botones">
                             <a href="https://github.com/ManuelGY21/LexiConnect" class="boton-proyecto" target="_blank">
-                                <img src="images/github.png" alt="GitHub"> Ver Código
+                                <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
                             <a href="images/Demoproyecto2.pdf" class="boton-proyecto demo">
-                                <img src="images/demo.png" alt="Demo"> Ver Demo
+                                <img src="images/demo.png" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
                     </div>
@@ -167,19 +281,19 @@
                         <img src="images/proyecto3.png" alt="Foto">
                     </div>
                     <div class="proyecto-contenido">
-                        <h3>Mi portafolio</h3>
+                        <h3 data-i18n="proyectoTresTitulo">Mi portafolio</h3>
                         <div class="tecnologias">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
                             <span class="tech-tag">JavaScript</span>
                         </div>
-                        <p>Sitio web personal interactivo y responsivo diseñado para presentar mi perfil profesional como estudiante de Ingeniería de Sistemas. El portafolio destaca mis habilidades técnicas, exhibe una galería con mis proyectos más relevantes y facilita la comunicación directa mediante un formulario de contacto integrado.</p>
+                        <p data-i18n="proyectoTresTexto">Sitio web personal interactivo y responsivo diseñado para presentar mi perfil profesional como estudiante de Ingeniería de Sistemas. Destaca mis habilidades técnicas y proyectos relevantes.</p>
                         <div class="proyecto-botones">
                             <a href="https://github.com/ManuelGY21/mi-portafolio" class="boton-proyecto" target="_blank">
-                                <img src="images/github.png" alt="GitHub"> Ver Código
+                                <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
                             <a href="https://manuelgy21.github.io/mi-portafolio/" class="boton-proyecto demo">
-                                <img src="images/demo.png" alt="Demo"> Ver Demo
+                                <img src="images/demo.png" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
                     </div>
@@ -190,15 +304,15 @@
 
     <section id="contacto">
         <div class="contenedor-sobre-mi">
-            <h2 class="titulo-contacto">Trabajemos Juntos</h2>
+            <h2 class="titulo-contacto" data-i18n="contactoTitulo">Trabajemos Juntos</h2>
             
             <div class="contacto-contenedor">
                 <div class="contacto-izquierda">
                     <p class="descripcion-contacto">
-                        Estoy interesado en oportunidades para colaborar en proyectos 
+                        <span data-i18n="contactoTexto">Estoy interesado en oportunidades para colaborar en proyectos
                         innovadores y desafiantes. Si tienes alguna propuesta, pregunta o 
-                        simplemente quieres saludar, no dudes en contactarme a través del 
-                        formulario o por mis redes sociales.
+                        simplemente quieres saludar, no dudes en contactarme a través del
+                        formulario o por mis redes sociales.</span>
                     </p>
                     
                     <div class="redes-sociales-iconos">
@@ -217,19 +331,19 @@
                 <div class="contacto-formulario">
                     <form id="contactForm" novalidate>
                         <div class="form-grupo">
-                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required minlength="2" maxlength="50">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" data-i18n-placeholder="nombrePlaceholder" required minlength="2" maxlength="50">
                         </div>
                         
                         <div class="form-grupo">
-                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" data-i18n-placeholder="correoPlaceholder" required>
                         </div>
                         
                         <div class="form-grupo">
-                            <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" rows="6" required minlength="10" maxlength="500"></textarea>
+                            <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" data-i18n-placeholder="mensajePlaceholder" rows="6" required minlength="10" maxlength="500"></textarea>
                         </div>
                         
                         <button type="submit" class="boton-enviar">
-                            Enviar Mensaje
+                            <span data-i18n="enviarMensaje">Enviar Mensaje</span>
                         </button>
                     </form>
                 </div>

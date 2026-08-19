@@ -6,7 +6,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: var(--color-primario);
+    background-color: var(--color-secundario);
     padding: 20px;
     justify-content: center;
 }

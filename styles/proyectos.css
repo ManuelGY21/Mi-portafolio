@@ -6,7 +6,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
     padding: var(--padding-seccion);
     justify-content: center;
     position: relative;

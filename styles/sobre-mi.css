@@ -9,50 +9,54 @@
     background-color: var(--color-primario);
     padding: var(--padding-seccion);
     justify-content: center;
+    border-bottom: 0;
+}
+
+#experiencia {
+    min-height: 100vh;
+    align-items: center;
+    background: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    border-top: 0;
+}
+
+.contenedor-experiencia {
+    max-width: 1240px;
+    width: 100%;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .contenedor-sobre-mi {
-    max-width: 1100px;
+    max-width: 1240px;
+    padding: 0;
     width: 100%;
     text-align: left;
 }
 
 /* ===== TARJETAS SUPERIORES ===== */
 .tarjetas-sobre-mi {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    margin-bottom: 28px;
 }
 
 .tarjeta {
-    background-color: var(--color-secundario);
-    color: var(--color-texto);
-    width: 350px;
-    padding: 25px;
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
-    position: relative;
     box-shadow: var(--sombra-suave);
+    color: var(--color-texto);
+    width: auto;
+    padding: 25px;
+    position: relative;
     transition: var(--transicion-hover);
 }
 
-/* Efecto de línea luminosa en la parte superior */
-.tarjeta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--color-resaltado), transparent);
-    box-shadow: 0 0 10px var(--color-resaltado);
-    border-radius: 50%;
-}
-
 .tarjeta:hover {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     box-shadow: var(--sombra-hover);
 }
 
@@ -63,7 +67,7 @@
 
 .tarjeta h3 {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     color: var(--color-resaltado);
     display: flex;
     align-items: center;
@@ -71,26 +75,27 @@
 }
 
 .tarjeta p {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: var(--color-gris);
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* ===== SECCIÓN DE HABILIDADES ===== */
 .habilidades-contenedor {
-    background-color: var(--color-secundario);
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-lg);
-    padding: 30px 15px;
-    margin-top: 25px;
+    box-shadow: var(--sombra-suave);
+    padding: 24px;
+    margin-top: 28px;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: var(--sombra-suave);
     text-align: center;
 }
 
 .titulo-habilidades {
-    font-size: 1.5em;
+    font-size: 1.45em;
     color: var(--color-resaltado);
     text-align: center;
     margin-bottom: 20px;
@@ -117,15 +122,15 @@
 .habilidades-linea {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .habilidad-card {
     background-color: var(--color-primario);
     border-radius: 12px;
-    padding: 20px;
-    width: 130px;
+    padding: 16px;
+    width: 140px;
     text-align: center;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
     transition: var(--transicion-hover);
@@ -137,9 +142,9 @@
 }
 
 .habilidad-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 8px;
     transition: var(--transicion-hover);
 }
 
@@ -199,4 +204,151 @@
     font-size: 0.9em;
     line-height: 1.5;
     margin: 0;
+}
+
+.experiencia-seccion,
+.certificaciones-seccion {
+    margin-top: 20px;
+}
+
+.experiencia-titulo {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.experiencias-contenedor {
+    display: grid;
+    gap: 18px;
+}
+
+.experiencias-contenedor .experiencia-seccion {
+    margin-top: 0;
+}
+
+.experiencia-seccion {
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 9px;
+    box-shadow: var(--sombra-suave);
+    color: var(--color-texto);
+    padding: 26px 28px;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+}
+
+.seccion-etiqueta {
+    background: var(--color-resaltado);
+    border-radius: 999px;
+    color: white;
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+    text-transform: uppercase;
+}
+
+.experiencia-seccion h3 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+}
+
+.experiencia-cabecera {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    padding-right: 24px;
+}
+
+.experiencia-detalle {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 3px;
+    margin-bottom: 18px;
+}
+
+.experiencia-identidad {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.experiencia-identidad > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.experiencia-logo {
+    background: var(--azul-oscuro);
+    border: 2px dashed var(--color-resaltado);
+    border-radius: 8px;
+    flex: 0 0 48px;
+    height: 48px;
+    width: 48px;
+}
+
+.experiencia-detalle span {
+    color: var(--color-gris);
+}
+
+.experiencia-lista {
+    color: var(--color-gris);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-left: 20px;
+}
+
+.experiencia-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.experiencia-tecnologias span {
+    background: var(--color-primario);
+    border-radius: 20px;
+    color: var(--color-gris);
+    font-size: 0.78rem;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.experiencia-secundaria {
+    margin-top: 16px;
+}
+
+.experiencia-contenido {
+    align-self: center;
+}
+
+.certificaciones-seccion {
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--sombra-suave);
+    padding: 24px;
+}
+
+.certificaciones-seccion .certificaciones-lista {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.certificaciones-seccion .certificacion-item {
+    background: var(--color-primario);
+    padding: 15px;
+}
+
+#experiencia .experiencia-seccion {
+    background: var(--color-secundario);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.certificaciones-seccion .certificacion-item h4 {
+    font-size: 1rem;
 }

@@ -13,12 +13,12 @@
 
 /* Contenedor de la navbar */
 .navbar-contenedor {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    column-gap: 190px;
+    column-gap: 45px;
     padding: 0 40px;
 }
 
@@ -37,7 +37,7 @@
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 28px;
     justify-content: center;
     align-items: center;
 }
@@ -51,6 +51,7 @@
     color: white;
     font-size: 18px;
     font-weight: bold;
+    white-space: nowrap;
     position: relative;
     padding: 10px 0;
     transition: color var(--transicion);
@@ -80,7 +81,81 @@
 /* ===== REDES SOCIALES EN NAVBAR ===== */
 .nav-derecha {
     display: flex;
+    align-items: center;
     gap: 15px;
+}
+
+.selector-idioma {
+    position: relative;
+}
+
+.idioma-toggle {
+    align-items: center;
+    background: var(--color-secundario);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: bold;
+    gap: 7px;
+    padding: 8px 10px;
+}
+
+.idioma-toggle:hover,
+.selector-idioma.abierto .idioma-toggle {
+    border-color: var(--color-resaltado);
+    color: var(--color-resaltado);
+}
+
+.idioma-flecha {
+    color: var(--color-gris);
+    font-size: 0.95rem;
+    line-height: 0.7;
+    transition: transform var(--transicion);
+}
+
+.selector-idioma.abierto .idioma-flecha {
+    transform: rotate(180deg);
+}
+
+.idioma-opciones {
+    background: var(--color-secundario);
+    border: 1px solid var(--color-resaltado);
+    border-radius: 7px;
+    box-shadow: 4px 5px 0 rgba(230, 57, 70, 0.22);
+    display: none;
+    min-width: 125px;
+    padding: 6px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    z-index: 1100;
+}
+
+.selector-idioma.abierto .idioma-opciones {
+    display: block;
+}
+
+.idioma-opciones button {
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    color: var(--color-gris);
+    cursor: pointer;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 9px 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.idioma-opciones button:hover,
+.idioma-opciones button.idioma-activo {
+    background: rgba(230, 57, 70, 0.13);
+    color: var(--color-resaltado);
 }
 
 .nav-derecha img {

@@ -18,6 +18,10 @@
     --color-resaltado: #e63946;
     --color-texto: #ffffff;
     --color-gris: #aaaaaa;
+    --azul-oscuro: #0b1e33;
+    --azul-proyectos: #123b5a;
+    --azul-claro: #d8edf7;
+    --azul-tarjeta: #183b59;
     
     /* Espaciados */
     --padding-seccion: 60px 20px;
@@ -53,8 +57,9 @@ body {
 /* Colores de fondo por sección */
 #inicio { background-color: var(--color-secundario); }
 #sobre-mi { background-color: var(--color-primario); }
-#proyectos { background-color: var(--color-secundario); }
-#contacto { background-color: var(--color-primario); }
+#experiencia { background-color: var(--color-secundario); }
+#proyectos { background-color: var(--color-primario); }
+#contacto { background-color: var(--color-secundario); }
 
 /* Títulos de sección reutilizables */
 .titulo-seccion {
