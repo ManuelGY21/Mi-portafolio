@@ -86,8 +86,8 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--sombra-suave);
-    padding: 24px;
-    margin-top: 28px;
+    padding: 16px 20px;
+    margin-top: 20px;
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
@@ -98,7 +98,7 @@
     font-size: 1.45em;
     color: var(--color-resaltado);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     position: relative;
     display: inline-block;
 }
@@ -126,6 +126,47 @@
     flex-wrap: wrap;
 }
 
+.habilidades-categorias {
+    display: grid;
+    gap: 12px 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.habilidad-categoria h3 {
+    color: var(--color-texto);
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.habilidad-categoria .habilidades-linea {
+    gap: 8px;
+}
+
+.habilidad-categoria:nth-child(4),
+.habilidad-categoria:nth-child(5) {
+    margin-top: 8px;
+}
+
+.habilidad-categoria .habilidad-card {
+    padding: 8px;
+    width: 100px;
+}
+
+.habilidad-categoria .habilidad-card img {
+    height: 36px;
+    margin-bottom: 4px;
+    width: 36px;
+}
+
+.habilidad-card .logo-github-blanco {
+    filter: brightness(0) invert(1);
+}
+
+.habilidad-categoria .habilidad-card p {
+    font-size: 0.78rem;
+}
+
 .habilidad-card {
     background-color: var(--color-primario);
     border-radius: 12px;
@@ -151,6 +192,10 @@
 .habilidad-card:hover img {
     transform: scale(1.15);
     filter: brightness(1.1);
+}
+
+.habilidad-card:hover img.logo-github-blanco {
+    filter: brightness(0) invert(1);
 }
 
 .habilidad-card p {
@@ -235,6 +280,14 @@
     display: grid;
     gap: 28px;
     grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transicion-hover);
+}
+
+.experiencia-seccion:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-6px);
 }
 
 .seccion-etiqueta {
@@ -282,11 +335,16 @@
 }
 
 .experiencia-logo {
-    background: var(--azul-oscuro);
-    border: 2px dashed var(--color-resaltado);
-    border-radius: 8px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
     flex: 0 0 48px;
     height: 48px;
+    object-fit: contain;
+    outline: none;
+    padding: 0;
     width: 48px;
 }
 
@@ -331,6 +389,7 @@
     border-radius: var(--border-radius-lg);
     box-shadow: var(--sombra-suave);
     padding: 24px;
+    text-align: center;
 }
 
 .certificaciones-seccion .certificaciones-lista {
