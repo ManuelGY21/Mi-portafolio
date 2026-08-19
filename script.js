@@ -38,6 +38,7 @@ const traducciones = {
         experienciaAcademicaDosTexto: 'Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras para proteger datos y comunicaciones.',
         experienciaAcademicaDosTextoDos: 'Desarrollé soluciones IoT aplicando buenas prácticas de conectividad, integridad y ciberseguridad.',
         certificadosEtiqueta: 'Certificados',
+        ampliarCertificado: 'Ampliar',
         habilidadesLenguajes: 'Lenguajes',
         habilidadesSistemas: 'Sistemas',
         habilidadesBasesDatos: 'Bases de datos',
@@ -47,6 +48,8 @@ const traducciones = {
         certificadoDos: 'IBM IT Support Professional Certificate',
         certificadoTres: 'Google IT Support Professional Certificate',
         certificadoCuatro: 'Google Cybersecurity Professional Certificate',
+        certificadoCinco: 'Certificación Profesional en Ciberseguridad con IA',
+        certificadoSeis: 'Certificado de Ciberseguridad e IoT',
         habilidadesTitulo: 'Mis Habilidades Técnicas',
         proyectosTitulo: 'Mis Proyectos',
         proyectoUnoTitulo: 'Realidad aumentada para diseñar ciudades sostenibles',
@@ -101,6 +104,7 @@ const traducciones = {
         experienciaAcademicaDosTexto: 'Analyzed vulnerabilities in simulated environments and proposed secure architectures to protect data and communications.',
         experienciaAcademicaDosTextoDos: 'Developed IoT solutions applying connectivity, integrity and cybersecurity best practices.',
         certificadosEtiqueta: 'Certificates',
+        ampliarCertificado: 'Enlarge',
         habilidadesLenguajes: 'Languages',
         habilidadesSistemas: 'Systems',
         habilidadesBasesDatos: 'Databases',
@@ -110,6 +114,8 @@ const traducciones = {
         certificadoDos: 'IBM IT Support Professional Certificate',
         certificadoTres: 'Google IT Support Professional Certificate',
         certificadoCuatro: 'Google Cybersecurity Professional Certificate',
+        certificadoCinco: 'Professional Certificate in Cybersecurity with AI',
+        certificadoSeis: 'Cybersecurity and IoT Certificate',
         habilidadesTitulo: 'Technical Skills',
         proyectosTitulo: 'My Projects',
         proyectoUnoTitulo: 'Augmented reality for designing sustainable cities',
@@ -249,6 +255,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     cambiarIdioma(idiomaGuardado);
+
+    const certificadoModal = document.getElementById('certificadoModal');
+    const certificadoModalImagen = document.getElementById('certificadoModalImagen');
+    const cerrarCertificadoModal = document.getElementById('cerrarCertificadoModal');
+
+    function abrirCertificado(rutaImagen) {
+        if (!certificadoModal || !certificadoModalImagen) return;
+        certificadoModalImagen.src = rutaImagen;
+        certificadoModal.hidden = false;
+        document.body.classList.add('modal-abierto');
+    }
+
+    function cerrarCertificado() {
+        if (!certificadoModal || !certificadoModalImagen) return;
+        certificadoModal.hidden = true;
+        certificadoModalImagen.src = '';
+        document.body.classList.remove('modal-abierto');
+    }
+
+    document.querySelectorAll('[data-certificado]').forEach((boton) => {
+        boton.addEventListener('click', () => abrirCertificado(boton.dataset.certificado));
+    });
+
+    cerrarCertificadoModal?.addEventListener('click', cerrarCertificado);
+    certificadoModal?.addEventListener('click', (evento) => {
+        if (evento.target === certificadoModal) cerrarCertificado();
+    });
+    document.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Escape') cerrarCertificado();
+    });
 
     const formulario = document.getElementById('contactForm');
     

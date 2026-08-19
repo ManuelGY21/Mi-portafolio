@@ -2,6 +2,11 @@
    RESPONSIVE.CSS - Media Queries y Diseño Responsivo
    ===================================================== */
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 /* ===== LAPTOPS Y TABLETS GRANDES (1200px y menor) ===== */
 @media (max-width: 1200px) {
     /* Navbar */
@@ -27,6 +32,14 @@
     
     .habilidades-contenedor {
         max-width: 100%;
+    }
+
+    .certificaciones-seccion .certificaciones-lista {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .certificacion-imagen {
+        height: 95px;
     }
 }
 
@@ -66,6 +79,11 @@
     .tarjeta {
         width: auto;
         padding: 20px;
+    }
+
+    .certificaciones-seccion,
+    .habilidades-contenedor {
+        width: 100%;
     }
     
     .habilidades-linea {
@@ -231,7 +249,21 @@
     }
 
     .certificaciones-seccion .certificaciones-lista {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .certificacion-imagen {
+        height: 105px;
+    }
+
+    .certificacion-item h4 {
+        font-size: 0.85rem;
+    }
+
+    .experiencia-lista {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin-left: 16px;
     }
     
     /* Proyectos */
@@ -365,6 +397,26 @@
     .habilidades-contenedor {
         padding: 20px 10px;
         margin-top: 20px;
+    }
+
+    .certificaciones-seccion {
+        padding: 12px;
+    }
+
+    .certificaciones-seccion .certificaciones-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .certificacion-imagen {
+        height: 130px;
+    }
+
+    .certificacion-item {
+        padding: 12px;
+    }
+
+    .experiencia-seccion {
+        padding: 16px;
     }
 
     .habilidades-categorias {

@@ -111,7 +111,9 @@
 .tech-tag:hover {
     background: #333;
     color: var(--color-texto);
-    border-color: #555;
+    border-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: translateY(-1px);
 }
 
 /* ===== BOTONES DE PROYECTO ===== */
