@@ -35,7 +35,7 @@
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: var(--transicion-hover);
-    border: 1px solid #333;
+    border: 1px solid var(--color-borde);
     display: flex;
     flex-direction: column;
 }
@@ -151,12 +151,13 @@
 
 /* Botón de demo con estilo diferente */
 .boton-proyecto.demo {
-    border-color: #4fc3f7;
-    color: #4fc3f7;
+    border-color: var(--color-resaltado-suave);
+    color: var(--color-resaltado-suave);
 }
 
 .boton-proyecto.demo:hover {
-    background: #4fc3f7;
+    background: var(--color-resaltado-suave);
+    border-color: var(--color-resaltado-suave);
     color: #fff;
 }
 
@@ -172,7 +173,7 @@
 }
 
 .boton-proyecto.demo img {
-    filter: brightness(0) saturate(100%) invert(70%) sepia(98%) saturate(400%) hue-rotate(180deg);
+    filter: brightness(0) saturate(100%) invert(60%) sepia(40%) saturate(1000%) hue-rotate(309deg) brightness(102%);
 }
 
 .boton-proyecto.demo:hover img {

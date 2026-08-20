@@ -45,7 +45,7 @@
 
 .tarjeta {
     background: var(--color-secundario);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-borde);
     border-radius: var(--border-radius);
     box-shadow: var(--sombra-suave);
     color: var(--color-texto);
@@ -83,7 +83,7 @@
 /* ===== SECCIÓN DE HABILIDADES ===== */
 .habilidades-contenedor {
     background: var(--color-secundario);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-borde);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--sombra-suave);
     padding: 16px 20px;
@@ -320,10 +320,14 @@
 }
 
 .certificacion-item h4 {
-    color: var(--color-resaltado);
+    color: var(--color-texto);
     font-size: 0.78rem;
     margin-bottom: 5px;
     margin-top: 0;
+}
+
+.certificacion-item:hover h4 {
+    color: var(--color-resaltado-suave);
 }
 
 .certificacion-fecha {
@@ -361,7 +365,7 @@
 
 .experiencia-seccion {
     background: var(--color-secundario);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid var(--color-borde);
     border-radius: 9px;
     box-shadow: var(--sombra-suave);
     color: var(--color-texto);
@@ -484,7 +488,7 @@
 
 .certificaciones-seccion {
     background: var(--color-secundario);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-borde);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--sombra-suave);
     padding: 16px;

@@ -16,9 +16,12 @@
     --color-primario: #0b1117;
     --color-secundario: #151d26;
     --color-resaltado: #e63946;
+    --color-resaltado-suave: #f07882;
     --color-texto: #f5f7fa;
-    --color-gris: #aab4be;
+    --color-gris: #bcc5ce;
     --color-acento: #36c2d9;
+    --color-borde: rgba(255, 255, 255, 0.17);
+    --color-estado: #83d493;
     --azul-oscuro: #0b1e33;
     --azul-proyectos: #123b5a;
     --azul-claro: #d8edf7;

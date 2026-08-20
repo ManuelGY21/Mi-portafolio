@@ -23,6 +23,6 @@ El formulario utiliza EmailJS desde su CDN. La clave pública debe estar restrin
 
 ## Publicación
 
-El sitio está preparado para GitHub Pages en:
+El sitio está preparado para GitHub Pages con el dominio personalizado:
 
-`https://manuelgy21.github.io/Mi-portafolio/`
+`https://manuelgonzales.dev/`
