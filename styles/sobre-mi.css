@@ -494,12 +494,38 @@
 .certificaciones-seccion .certificaciones-lista {
     display: grid;
     gap: 10px;
+    direction: ltr;
+    grid-auto-flow: row;
     grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .certificaciones-seccion .certificacion-item {
     background: var(--color-primario);
     padding: 10px;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(1) {
+    order: 6;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(2) {
+    order: 5;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(3) {
+    order: 4;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(4) {
+    order: 3;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(5) {
+    order: 2;
+}
+
+.certificaciones-seccion .certificacion-item:nth-child(6) {
+    order: 1;
 }
 
 #experiencia .experiencia-seccion {

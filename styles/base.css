@@ -13,11 +13,12 @@
 
 /* Variables CSS - Paleta de Colores */
 :root {
-    --color-primario: #0e141b;
-    --color-secundario: #1a1f25;
+    --color-primario: #0b1117;
+    --color-secundario: #151d26;
     --color-resaltado: #e63946;
-    --color-texto: #ffffff;
-    --color-gris: #aaaaaa;
+    --color-texto: #f5f7fa;
+    --color-gris: #aab4be;
+    --color-acento: #36c2d9;
     --azul-oscuro: #0b1e33;
     --azul-proyectos: #123b5a;
     --azul-claro: #d8edf7;
@@ -33,7 +34,7 @@
     --transicion-hover: all 0.3s ease;
     
     /* Sombras */
-    --sombra-suave: 0 4px 15px rgba(255, 255, 255, 0.05);
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.24);
     --sombra-hover: 0px 6px 20px rgba(230, 57, 70, 0.3);
 }
 

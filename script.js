@@ -17,11 +17,11 @@ const traducciones = {
         fotoCaption: 'Ingeniero de Sistemas en formación',
         sobreMiTitulo: 'Sobre Mí',
         quienSoyTitulo: '¿Quién Soy?',
-        quienSoyTexto: 'Estudiante de octavo ciclo de Ingeniería de Sistemas de Información en la UPC, orientado a soporte técnico, infraestructura y ciberseguridad.',
+        quienSoyTexto: 'Estudiante de Ingeniería de Sistemas de Información en la UPC, orientado a soporte TI, infraestructura y ciberseguridad.',
         objetivoTitulo: 'Mi Objetivo',
-        objetivoTexto: 'Desarrollarme en soporte TI, infraestructura y ciberseguridad, aportando soluciones técnicas que generen impacto.',
+        objetivoTexto: 'Desarrollarme en soporte TI e infraestructura, aplicando soluciones técnicas y buenas prácticas de seguridad.',
         perfilTitulo: 'Mi Perfil',
-        perfilTexto: 'Cuento con formación en diagnóstico de incidencias, Windows, Linux, redes TCP/IP, gestión de usuarios y fundamentos de ITSM.',
+        perfilTexto: 'Formación en diagnóstico de incidencias, Windows, Linux, bases de datos, redes e ITSM, respaldada por certificaciones profesionales.',
         experienciaTitulo: 'Experiencia',
         experienciaLaboralEtiqueta: 'Experiencia laboral',
         experienciaAcademicaEtiqueta: 'Experiencia académica',
@@ -83,11 +83,11 @@ const traducciones = {
         fotoCaption: 'System Engineer in training',
         sobreMiTitulo: 'About Me',
         quienSoyTitulo: 'Who Am I?',
-        quienSoyTexto: 'Eighth-cycle Information Systems Engineering student at UPC, focused on technical support, infrastructure and cybersecurity.',
+        quienSoyTexto: 'Information Systems Engineering student at UPC, focused on IT support, infrastructure and cybersecurity.',
         objetivoTitulo: 'My Goal',
-        objetivoTexto: 'To grow in IT support, infrastructure and cybersecurity while contributing technical solutions with real impact.',
+        objetivoTexto: 'To grow in IT support and infrastructure while applying technical solutions and security best practices.',
         perfilTitulo: 'My Profile',
-        perfilTexto: 'Trained in incident diagnosis, Windows, Linux, TCP/IP networking, user management and ITSM fundamentals.',
+        perfilTexto: 'Trained in incident diagnosis, Windows, Linux, databases, networking and ITSM, supported by professional certifications.',
         experienciaTitulo: 'Experience',
         experienciaLaboralEtiqueta: 'Work experience',
         experienciaAcademicaEtiqueta: 'Academic experience',
@@ -136,6 +136,36 @@ const traducciones = {
         mensajeEnviadoTexto: 'Thank you for contacting me. I will get back to you soon.'
     }
 };
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'auto';
+}
+
+function volverAlInicio() {
+    if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    const posicionAnterior = window.scrollY;
+
+    if (posicionAnterior <= 0) return;
+
+    const duracion = 1000;
+    const inicio = performance.now();
+
+    function animarSubida(momentoActual) {
+        const progreso = Math.min((momentoActual - inicio) / duracion, 1);
+        window.scrollTo(0, Math.round(posicionAnterior * (1 - progreso)));
+
+        if (progreso < 1) requestAnimationFrame(animarSubida);
+    }
+
+    requestAnimationFrame(animarSubida);
+}
+
+window.addEventListener('pageshow', () => {
+    requestAnimationFrame(volverAlInicio);
+});
 
 function cambiarIdioma(idioma) {
     const textos = traducciones[idioma];

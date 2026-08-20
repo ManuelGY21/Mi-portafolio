@@ -3,7 +3,7 @@
    ===================================================== */
 
 .navbar {
-    background-color: #0e141b;
+    background-color: var(--color-primario);
     position: fixed;
     width: 100%;
     top: 0;
