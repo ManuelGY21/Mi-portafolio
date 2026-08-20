@@ -331,22 +331,58 @@ body {
 /* ===== MÓVILES (480px y menor) ===== */
 @media (max-width: 480px) {
     html {
-        scroll-padding-top: 98px;
+        scroll-padding-top: 76px;
     }
 
     /* Navegación */
     .navbar {
-        padding: 10px 0;
+        padding: 12px 0;
     }
     
     .navbar-contenedor {
-        padding: 0 10px;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        padding: 0 16px;
         gap: 10px;
+        max-width: 100%;
+    }
+
+    .nav-izquierda {
+        min-width: 0;
+    }
+
+    .nav-izquierda .logo {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .menu-toggle {
+        grid-column: 3;
+        grid-row: 1;
+        order: initial;
+    }
+
+    .nav-derecha {
+        grid-column: 2;
+        grid-row: 1;
+        order: initial;
+    }
+
+    .nav-derecha > a {
+        display: none;
+    }
+
+    .idioma-toggle {
+        padding: 7px 9px;
     }
     
     .nav-links {
+        background: var(--color-primario);
+        grid-column: 1 / -1;
+        grid-row: 2;
         gap: 2px;
         justify-content: center;
+        margin: 0 -16px -12px;
+        padding: 10px 16px 14px;
     }
     
     .nav-links a {
@@ -365,9 +401,20 @@ body {
     }
     
     /* Inicio */
+    #inicio {
+        align-items: flex-start;
+        min-height: 100svh;
+        padding: 105px 16px 45px;
+    }
+
     .inicio-contenedor {
         width: 100%;
-        gap: 2rem;
+        gap: 1.75rem;
+        justify-content: flex-start;
+    }
+
+    .texto-inicio {
+        width: 100%;
     }
     
     .texto-inicio h1 {
@@ -380,7 +427,18 @@ body {
     }
     
     .foto-marco {
-        width: 180px;
+        aspect-ratio: 4 / 5;
+        width: min(220px, 68vw);
+    }
+
+    .foto-marco img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 42%;
+    }
+
+    .imagen-inicio {
+        margin: 0 auto;
     }
     
     .botones {
@@ -537,7 +595,7 @@ body {
     }
     
     .foto-marco {
-        width: 150px;
+        width: min(190px, 64vw);
     }
     
     .tarjeta {
