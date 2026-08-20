@@ -169,6 +169,39 @@ const traducciones = {
     }
 };
 
+function volverALaPortadaAlRecargar() {
+    const navegacion = performance.getEntriesByType('navigation')[0];
+    if (navegacion?.type !== 'reload') return;
+
+    if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    const posicionInicial = window.scrollY;
+    if (posicionInicial <= 0) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.scrollTo(0, 0);
+        return;
+    }
+
+    const duracion = 1400;
+    const comienzo = performance.now();
+
+    function animarSubida(tiempoActual) {
+        const progreso = Math.min((tiempoActual - comienzo) / duracion, 1);
+        const suavizado = 1 - Math.pow(1 - progreso, 3);
+        window.scrollTo(0, Math.round(posicionInicial * (1 - suavizado)));
+        if (progreso < 1) requestAnimationFrame(animarSubida);
+    }
+
+    requestAnimationFrame(animarSubida);
+}
+
+window.addEventListener('pageshow', () => {
+    requestAnimationFrame(() => requestAnimationFrame(volverALaPortadaAlRecargar));
+}, { once: true });
+
 function cambiarIdioma(idioma) {
     const textos = traducciones[idioma];
     if (!textos) return;

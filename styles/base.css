@@ -60,6 +60,15 @@ section {
     min-height: calc(100svh - 64px);
 }
 
+@media (min-width: 769px) {
+    #sobre-mi > .contenedor-sobre-mi,
+    #experiencia > .contenedor-experiencia,
+    #proyectos > .contenedor-sobre-mi,
+    #contacto > .contenedor-sobre-mi {
+        transform: translateY(-32px);
+    }
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
