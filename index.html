@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Manuel Gonzales, estudiante de Ingeniería de Sistemas de Información especializado en soporte TI, infraestructura y ciberseguridad.">
+    <meta name="theme-color" content="#0b1117">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:site_name" content="Portafolio de Manuel Gonzales">
+    <meta property="og:title" content="Manuel Gonzales | Soporte TI y Ciberseguridad">
+    <meta property="og:description" content="Experiencia, certificaciones y proyectos de Manuel Gonzales en soporte TI, infraestructura y ciberseguridad.">
+    <meta property="og:url" content="https://manuelgy21.github.io/Mi-portafolio/">
+    <meta property="og:image" content="https://manuelgy21.github.io/Mi-portafolio/images/proyecto3.png">
+    <meta property="og:image:secure_url" content="https://manuelgy21.github.io/Mi-portafolio/images/proyecto3.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1400">
+    <meta property="og:image:height" content="643">
+    <meta property="og:image:alt" content="Vista del portafolio profesional de Manuel Gonzales">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manuel Gonzales | Soporte TI y Ciberseguridad">
+    <meta name="twitter:description" content="Experiencia, certificaciones y proyectos en soporte TI, infraestructura y ciberseguridad.">
+    <meta name="twitter:image" content="https://manuelgy21.github.io/Mi-portafolio/images/proyecto3.png">
+    <meta name="twitter:image:alt" content="Vista del portafolio profesional de Manuel Gonzales">
+    <link rel="canonical" href="https://manuelgy21.github.io/Mi-portafolio/">
     <title>Manuel Gonzales | Soporte TI y Ciberseguridad</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon-mg.svg">
+    <link rel="icon" type="image/png" sizes="any" href="images/logomg-rounded.png?v=2">
+    <link rel="apple-touch-icon" href="images/logomg-rounded.png?v=2">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="styles/inicio.css">
@@ -15,13 +36,18 @@
     <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
+<a class="saltar-contenido" href="#contenido-principal" data-i18n="saltarContenido">Saltar al contenido</a>
 <nav class="navbar">
     <div class="navbar-contenedor">
         <div class="nav-izquierda">
             <div class="logo">Dev <span>Manuel.</span></div>
         </div>
 
-        <ul class="nav-links">
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="menu-principal">
             <li><a href="#inicio" data-i18n="navInicio">Inicio</a></li>
             <li><a href="#sobre-mi" data-i18n="navSobreMi">Sobre Mí</a></li>
             <li><a href="#experiencia" data-i18n="navExperiencia">Experiencia</a></li>
@@ -30,45 +56,47 @@
         </ul>
 
         <div class="nav-derecha">
-            <div class="selector-idioma" aria-label="Selector de idioma">
-                <button type="button" class="idioma-toggle" aria-expanded="false" aria-haspopup="listbox">
+            <div class="selector-idioma">
+                <button type="button" class="idioma-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="Seleccionar idioma">
                     <span class="idioma-codigo">ES</span>
                     <span class="idioma-flecha" aria-hidden="true">⌄</span>
                 </button>
-                <div class="idioma-opciones" role="listbox">
-                    <button type="button" data-lang="es" role="option">Español</button>
-                    <button type="button" data-lang="en" role="option">English</button>
+                <div class="idioma-opciones" role="menu">
+                    <button type="button" data-lang="es" role="menuitem">Español</button>
+                    <button type="button" data-lang="en" role="menuitem">English</button>
                 </div>
             </div>
-            <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank">
+            <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank" rel="noopener noreferrer">
                 <img src="images/linkedin.png" alt="LinkedIn">
             </a>
-            <a href="https://github.com/ManuelGY21" target="_blank">
+            <a href="https://github.com/ManuelGY21" target="_blank" rel="noopener noreferrer">
                 <img src="images/github.png" alt="GitHub">
             </a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=manuelgonzalesyactayo@gmail.com&su=Contacto%20desde%20tu%20Portafolio&body=Hola%20Manuel,%0D%0A%0D%0AMe%20gustar%C3%ADa%20contactarte..." target="_blank">
+            <a href="mailto:manuelgonzalesyactayo@gmail.com" target="_blank" rel="noopener noreferrer">
                 <img src="images/gmail.png" alt="Gmail">
             </a>
         </div>
     </div>
 </nav>
 
+<main id="contenido-principal">
+
     <section id="inicio">
         <div class="inicio-contenedor">
             <div class="texto-inicio">
                 <h1><span class="hi" data-i18n="saludo">Hi,</span> <br> <span data-i18n="soy">I'm</span> <span class="resaltado">Manuel</span></h1>
-                <h2 data-i18n="puestoPrincipal">Student Information Systems Engineer<span class="cursor-parpadeo">|</span></h2>
+                <h2><span data-i18n="puestoPrincipal">Estudiante de Ingeniería de Sistemas de Información</span><span class="cursor-parpadeo" aria-hidden="true">|</span></h2>
                 <div class="estado-laboral"><span class="estado-punto"></span><span data-i18n="estadoLaboral">Actualmente trabajando</span></div>
-                <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf" class="boton-cv" target="_blank" data-i18n="curriculum">Curriculum</a>
+                <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf?v=2" class="boton-cv" target="_blank" rel="noopener noreferrer" data-i18n="curriculum">Currículum</a>
                 <div class="botones">
-                    <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                    <a href="https://github.com/ManuelGY21" target="_blank"><img src="images/github.png" alt="GitHub"></a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=manuelgonzalesyactayo@gmail.com&su=Contacto%20desde%20tu%20Portafolio&body=Hola%20Manuel,%0D%0A%0D%0AMe%20gustar%C3%ADa%20contactarte..." target="_blank"><img src="images/gmail.png" alt="Email"></a>
+                    <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/ManuelGY21" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="mailto:manuelgonzalesyactayo@gmail.com"><img src="images/gmail.png" alt="Correo electrónico"></a>
                 </div>
             </div>
             <div class="imagen-inicio">
                 <div class="foto-marco">
-                    <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales">
+                    <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales" width="410" height="410" decoding="async" fetchpriority="high">
                 </div>
                 <p class="foto-caption" data-i18n="fotoCaption">Ingeniero de Sistemas en formación</p>
             </div>
@@ -108,7 +136,7 @@
                 <div class="certificaciones-lista">
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-UNIANDES.jpg" aria-label="Ampliar certificado de Uniandes">
-                            <img src="images/certificado-UNIANDES.jpg" alt="Certificado de Ciberseguridad e IoT de la Universidad de los Andes" class="certificacion-imagen">
+                            <img src="images/certificado-UNIANDES.jpg" alt="Certificado de Ciberseguridad e IoT de la Universidad de los Andes" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoSeis">Certificado de Ciberseguridad e IoT</h4>
@@ -116,7 +144,7 @@
                     </article>
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-google-cybersecurity.png" aria-label="Ampliar certificado de Google Cybersecurity">
-                            <img src="images/certificado-google-cybersecurity.png" alt="Certificado Google Cybersecurity Professional" class="certificacion-imagen">
+                            <img src="images/certificado-google-cybersecurity.png" alt="Certificado Google Cybersecurity Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoCuatro">Google Cybersecurity Professional Certificate</h4>
@@ -124,7 +152,7 @@
                     </article>
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-ibm-it-support.png" aria-label="Ampliar certificado de IBM">
-                            <img src="images/certificado-ibm-it-support.png" alt="Certificado IBM IT Support Professional" class="certificacion-imagen">
+                            <img src="images/certificado-ibm-it-support.png" alt="Certificado IBM IT Support Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoDos">IBM IT Support Professional Certificate</h4>
@@ -132,7 +160,7 @@
                     </article>
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-google-it-support.png" aria-label="Ampliar certificado de Google IT Support">
-                            <img src="images/certificado-google-it-support.png" alt="Certificado Google IT Support Professional" class="certificacion-imagen">
+                            <img src="images/certificado-google-it-support.png" alt="Certificado Google IT Support Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoTres">Google IT Support Professional Certificate</h4>
@@ -140,7 +168,7 @@
                     </article>
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-microsoft.jpeg" aria-label="Ampliar certificado de Microsoft">
-                            <img src="images/certificado-microsoft.jpeg" alt="Certificado Microsoft SQL AI Developer Associate" class="certificacion-imagen">
+                            <img src="images/certificado-microsoft.jpeg" alt="Certificado Microsoft SQL AI Developer Associate" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoUno">Microsoft Certified: SQL AI Developer Associate</h4>
@@ -148,7 +176,7 @@
                     </article>
                     <article class="certificacion-item">
                         <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-ITBA.png" aria-label="Ampliar certificado de ITBA">
-                            <img src="images/certificado-ITBA.png" alt="Certificado de Ciberseguridad con IA de ITBA" class="certificacion-imagen">
+                            <img src="images/certificado-ITBA.png" alt="Certificado de Ciberseguridad con IA de ITBA" class="certificacion-imagen" loading="lazy" decoding="async">
                             <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                         </button>
                         <h4 data-i18n="certificadoCinco">Certificación Profesional en Ciberseguridad con IA</h4>
@@ -250,7 +278,7 @@
                         <ul class="experiencia-lista">
                             <li data-i18n="experienciaAcademicaUnoTexto">Desarrollé conocimientos en diseño y operación de un SOC moderno, utilizando SIEM, Elastic Stack (ELK), análisis de logs y procesamiento de datos con Python.</li>
                             <li data-i18n="experienciaAcademicaUnoTextoDos">Apliqué inteligencia artificial y modelos de lenguaje (LLMs) para el análisis de incidentes, detección de amenazas y automatización de procesos de seguridad.</li>
-                            <li>Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
+                            <li data-i18n="experienciaAcademicaUnoTextoTres">Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
                         </ul>
                     </div>
                 </div>
@@ -274,7 +302,7 @@
                         <ul class="experiencia-lista">
                             <li data-i18n="experienciaAcademicaDosTexto">Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras orientadas a proteger los datos y las comunicaciones.</li>
                             <li data-i18n="experienciaAcademicaDosTextoDos">Desarrollé soluciones IoT mediante la integración de dispositivos, aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
-                            <li>Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
+                            <li data-i18n="experienciaAcademicaDosTextoTres">Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
                         </ul>
                     </div>
                 </div>
@@ -289,7 +317,7 @@
             <div class="contenedor-proyectos">
                 <div class="proyecto-card">
                     <div class="proyecto-imagen">
-                        <img src="images/proyecto1.png" alt="Foto">
+                        <img src="images/proyecto1.png" alt="Vista de ProyectVision" loading="lazy" decoding="async">
                     </div>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoUnoTitulo">Realidad aumentada para diseñar ciudades sostenibles</h3>
@@ -300,10 +328,10 @@
                         </div>
                         <p data-i18n="proyectoUnoTexto">La aplicación ProyectVision fue creada para transformar la forma en que se llevan a cabo los proyectos urbanos. En un mundo en constante evolución, la necesidad de herramientas innovadoras se vuelve cada vez más crucial.</p>
                         <div class="proyecto-botones">
-                            <a href="https://github.com/ManuelGY21/ProyectVision" class="boton-proyecto" target="_blank">
+                            <a href="https://github.com/ManuelGY21/ProyectVision" class="boton-proyecto" target="_blank" rel="noopener noreferrer">
                                 <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
-                            <a href="https://manuelgy21.github.io/ProyectVision/" class="boton-proyecto demo" target="_blank">
+                            <a href="https://manuelgy21.github.io/ProyectVision/" class="boton-proyecto demo" target="_blank" rel="noopener noreferrer">
                                 <img src="images/demo.jpg" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
@@ -312,7 +340,7 @@
 
                 <div class="proyecto-card">
                     <div class="proyecto-imagen">
-                        <img src="images/proyecto2.png" alt="Foto">
+                        <img src="images/proyecto2.png" alt="Vista de LexiConnect" loading="lazy" decoding="async">
                     </div>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoDosTitulo">Buffet de Abogados</h3>
@@ -323,10 +351,10 @@
                         </div>
                         <p data-i18n="proyectoDosTexto">LexiConnect es una plataforma integral diseñada para optimizar la gestión y administración de bufetes de abogados. Su objetivo es centralizar la información legal, facilitar el seguimiento de casos y mejorar la comunicación entre profesionales y clientes.</p>
                         <div class="proyecto-botones">
-                            <a href="https://github.com/ManuelGY21/LexiConnect" class="boton-proyecto" target="_blank">
+                            <a href="https://github.com/ManuelGY21/LexiConnect" class="boton-proyecto" target="_blank" rel="noopener noreferrer">
                                 <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
-                            <a href="images/Demoproyecto2.pdf" class="boton-proyecto demo">
+                            <a href="images/Demoproyecto2.pdf" class="boton-proyecto demo" target="_blank" rel="noopener noreferrer">
                                 <img src="images/demo.jpg" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
@@ -335,7 +363,7 @@
 
                 <div class="proyecto-card">
                     <div class="proyecto-imagen">
-                        <img src="images/proyecto3.png" alt="Foto">
+                        <img src="images/proyecto3.png" alt="Vista del portafolio de Manuel Gonzales" loading="lazy" decoding="async">
                     </div>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoTresTitulo">Mi portafolio</h3>
@@ -346,10 +374,10 @@
                         </div>
                         <p data-i18n="proyectoTresTexto">Sitio web personal interactivo y responsivo diseñado para presentar mi perfil profesional como estudiante de Ingeniería de Sistemas. Destaca mis habilidades técnicas y proyectos relevantes.</p>
                         <div class="proyecto-botones">
-                            <a href="https://github.com/ManuelGY21/mi-portafolio" class="boton-proyecto" target="_blank">
+                            <a href="https://github.com/ManuelGY21/Mi-portafolio" class="boton-proyecto" target="_blank" rel="noopener noreferrer">
                                 <img src="images/github.png" alt="GitHub"> <span data-i18n="verCodigo">Ver Código</span>
                             </a>
-                            <a href="https://manuelgy21.github.io/mi-portafolio/" class="boton-proyecto demo">
+                            <a href="https://manuelgy21.github.io/Mi-portafolio/" class="boton-proyecto demo" target="_blank" rel="noopener noreferrer">
                                 <img src="images/demo.jpg" alt="Demo"> <span data-i18n="verDemo">Ver Demo</span>
                             </a>
                         </div>
@@ -373,13 +401,13 @@
                     </p>
                     
                     <div class="redes-sociales-iconos">
-                        <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank" class="red-social-icono">
+                        <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank" rel="noopener noreferrer" class="red-social-icono">
                             <img src="images/linkedin.png" alt="LinkedIn">
                         </a>
-                        <a href="https://github.com/ManuelGY21" target="_blank" class="red-social-icono">
+                        <a href="https://github.com/ManuelGY21" target="_blank" rel="noopener noreferrer" class="red-social-icono">
                             <img src="images/github.png" alt="GitHub">
                         </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=manuelgonzalesyactayo@gmail.com&su=Contacto%20desde%20tu%20Portafolio&body=Hola%20Manuel,%0D%0A%0D%0AMe%20gustar%C3%ADa%20contactarte..." target="_blank" class="red-social-icono">
+                        <a href="mailto:manuelgonzalesyactayo@gmail.com" class="red-social-icono">
                             <img src="images/gmail.png" alt="Gmail">
                         </a>
                     </div>
@@ -388,15 +416,21 @@
                 <div class="contacto-formulario">
                     <form id="contactForm" novalidate>
                         <div class="form-grupo">
+                            <label for="nombre" data-i18n="nombreEtiqueta">Nombre</label>
                             <input type="text" id="nombre" name="nombre" placeholder="Nombre" data-i18n-placeholder="nombrePlaceholder" required minlength="2" maxlength="50">
+                            <span class="campo-error" id="nombreError" aria-live="polite"></span>
                         </div>
                         
                         <div class="form-grupo">
-                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" data-i18n-placeholder="correoPlaceholder" required>
+                            <label for="email" data-i18n="correoEtiqueta">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="Correo Electrónico" data-i18n-placeholder="correoPlaceholder" required maxlength="254">
+                            <span class="campo-error" id="emailError" aria-live="polite"></span>
                         </div>
                         
                         <div class="form-grupo">
+                            <label for="mensaje" data-i18n="mensajeEtiqueta">Mensaje</label>
                             <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" data-i18n-placeholder="mensajePlaceholder" rows="6" required minlength="10" maxlength="500"></textarea>
+                            <span class="campo-error" id="mensajeError" aria-live="polite"></span>
                         </div>
                         
                         <button type="submit" class="boton-enviar">
@@ -407,16 +441,15 @@
             </div>
         </div>
     </section>
+</main>
 
-    <div class="certificado-modal" id="certificadoModal" role="dialog" aria-modal="true" aria-label="Vista ampliada del certificado" hidden>
-        <button type="button" class="certificado-modal-cerrar" id="cerrarCertificadoModal" aria-label="Cerrar">&times;</button>
+    <div class="certificado-modal" id="certificadoModal" role="dialog" aria-modal="true" aria-labelledby="certificadoModalTitulo" hidden tabindex="-1">
+        <h2 class="sr-only" id="certificadoModalTitulo" data-i18n="certificadoModalTitulo">Vista ampliada del certificado</h2>
+        <button type="button" class="certificado-modal-cerrar" id="cerrarCertificadoModal" aria-label="Cerrar" data-i18n-aria-label="cerrar">&times;</button>
         <img id="certificadoModalImagen" class="certificado-modal-imagen" src="" alt="Certificado ampliado">
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        emailjs.init('X4_t8wQlEDT9ZzXha');
-    </script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.12.1/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manuelgy21.github.io/Mi-portafolio/sitemap.xml

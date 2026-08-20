@@ -44,6 +44,67 @@ body {
     color: var(--color-texto);
 }
 
+html {
+    scroll-padding-top: 72px;
+}
+
+section {
+    scroll-margin-top: 0;
+}
+
+#inicio,
+#sobre-mi,
+#experiencia,
+#proyectos,
+#contacto {
+    min-height: calc(100svh - 64px);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+.saltar-contenido {
+    background: var(--color-resaltado);
+    color: #fff;
+    font-weight: 700;
+    left: 16px;
+    padding: 12px 16px;
+    position: fixed;
+    top: -80px;
+    transition: top var(--transicion);
+    z-index: 2000;
+}
+
+.saltar-contenido:focus {
+    top: 12px;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
 /* Estilos base para secciones */
 .section {
     min-height: 100vh;

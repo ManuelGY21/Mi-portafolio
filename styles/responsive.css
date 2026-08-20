@@ -133,26 +133,43 @@ body {
 
 /* ===== TABLETS PEQUEÑAS (768px y menor) ===== */
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 104px;
+    }
+
     /* Navegación */
     .navbar {
         padding: 15px 0;
     }
     
     .navbar-contenedor {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        text-align: center;
+        grid-template-columns: 1fr auto;
+        gap: 8px 15px;
         padding: 0 15px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
     
     .nav-links {
-        gap: 25px;
-        order: 2;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        grid-column: 1 / -1;
+        order: 3;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .nav-links.abierto {
+        display: flex;
     }
     
     .nav-derecha {
-        order: 3;
+        grid-column: 1 / -1;
         justify-content: center;
+        order: 2;
     }
     
     /* Secciones generales */
@@ -313,6 +330,10 @@ body {
 
 /* ===== MÓVILES (480px y menor) ===== */
 @media (max-width: 480px) {
+    html {
+        scroll-padding-top: 98px;
+    }
+
     /* Navegación */
     .navbar {
         padding: 10px 0;
@@ -324,8 +345,7 @@ body {
     }
     
     .nav-links {
-        flex-wrap: wrap;
-        gap: 15px;
+        gap: 2px;
         justify-content: center;
     }
     

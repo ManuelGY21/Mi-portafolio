@@ -4,16 +4,19 @@
 
 const traducciones = {
     es: {
+        saltarContenido: 'Saltar al contenido',
+        abrirMenu: 'Abrir menú',
+        cerrarMenu: 'Cerrar menú',
         saludo: 'Hola,',
         soy: 'Soy',
-        puestoPrincipal: 'Student Information Systems Engineer',
+        puestoPrincipal: 'Estudiante de Ingeniería de Sistemas de Información',
         navInicio: 'Inicio',
         navSobreMi: 'Sobre Mí',
         navExperiencia: 'Experiencia',
         navProyectos: 'Proyectos',
         navContacto: 'Contacto',
         estadoLaboral: 'Actualmente trabajando',
-        curriculum: 'Curriculum',
+        curriculum: 'Currículum',
         fotoCaption: 'Ingeniero de Sistemas en formación',
         sobreMiTitulo: 'Sobre Mí',
         quienSoyTitulo: '¿Quién Soy?',
@@ -34,9 +37,11 @@ const traducciones = {
         experienciaAcademicaUnoPuesto: 'Misión Universitaria de Ciberseguridad con IA',
         experienciaAcademicaUnoTexto: 'Desarrollé conocimientos en diseño y operación de un SOC moderno, análisis de logs y procesamiento de datos con Python.',
         experienciaAcademicaUnoTextoDos: 'Apliqué inteligencia artificial y modelos de lenguaje para el análisis de incidentes, detección de amenazas y automatización.',
+        experienciaAcademicaUnoTextoTres: 'Participé en prácticas de automatización ofensiva y defensiva con Nmap, Subfinder, playbooks y SOAR.',
         experienciaAcademicaDosPuesto: 'Misión Universitaria de Ciberseguridad e IoT',
         experienciaAcademicaDosTexto: 'Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras para proteger datos y comunicaciones.',
         experienciaAcademicaDosTextoDos: 'Desarrollé soluciones IoT aplicando buenas prácticas de conectividad, integridad y ciberseguridad.',
+        experienciaAcademicaDosTextoTres: 'Participé en actividades prácticas de seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.',
         certificadosEtiqueta: 'Certificados',
         ampliarCertificado: 'Ampliar',
         habilidadesLenguajes: 'Lenguajes',
@@ -54,7 +59,7 @@ const traducciones = {
         proyectosTitulo: 'Mis Proyectos',
         proyectoUnoTitulo: 'Realidad aumentada para diseñar ciudades sostenibles',
         proyectoUnoTexto: 'La aplicación ProyectVision fue creada para transformar la forma en que se llevan a cabo los proyectos urbanos. En un mundo en constante evolución, la necesidad de herramientas innovadoras se vuelve cada vez más crucial.',
-        proyectoDosTitulo: 'Buffet de Abogados',
+        proyectoDosTitulo: 'Bufete de abogados',
         proyectoDosTexto: 'LexiConnect es una plataforma integral diseñada para optimizar la gestión y administración de bufetes de abogados. Su objetivo es centralizar la información legal, facilitar el seguimiento de casos y mejorar la comunicación entre profesionales y clientes.',
         proyectoTresTitulo: 'Mi portafolio',
         proyectoTresTexto: 'Sitio web personal interactivo y responsivo diseñado para presentar mi perfil profesional como estudiante de Ingeniería de Sistemas. Destaca mis habilidades técnicas y proyectos relevantes.',
@@ -63,13 +68,27 @@ const traducciones = {
         contactoTitulo: 'Trabajemos Juntos',
         contactoTexto: 'Estoy interesado en oportunidades para colaborar en proyectos innovadores y desafiantes. Si tienes alguna propuesta, pregunta o simplemente quieres saludar, no dudes en contactarme a través del formulario o por mis redes sociales.',
         nombrePlaceholder: 'Nombre',
+        nombreEtiqueta: 'Nombre',
         correoPlaceholder: 'Correo Electrónico',
+        correoEtiqueta: 'Correo electrónico',
         mensajePlaceholder: 'Tu mensaje',
+        mensajeEtiqueta: 'Mensaje',
         enviarMensaje: 'Enviar Mensaje',
+        enviando: 'Enviando…',
+        errorNombre: 'Escribe un nombre de entre 2 y 50 caracteres.',
+        errorCorreo: 'Escribe una dirección de correo válida.',
+        errorMensaje: 'Escribe un mensaje de entre 10 y 500 caracteres.',
+        errorEnvio: 'No se pudo enviar el mensaje. Inténtalo nuevamente.',
+        servicioNoDisponible: 'El formulario no está disponible temporalmente. Escríbeme por correo.',
+        certificadoModalTitulo: 'Vista ampliada del certificado',
+        cerrar: 'Cerrar',
         mensajeEnviadoTitulo: '¡Mensaje Enviado!',
         mensajeEnviadoTexto: 'Gracias por contactarme. Te responderé lo antes posible.'
     },
     en: {
+        saltarContenido: 'Skip to content',
+        abrirMenu: 'Open menu',
+        cerrarMenu: 'Close menu',
         saludo: 'Hi,',
         soy: "I'm",
         puestoPrincipal: 'Student Information Systems Engineer',
@@ -100,9 +119,11 @@ const traducciones = {
         experienciaAcademicaUnoPuesto: 'University Cybersecurity with AI Mission',
         experienciaAcademicaUnoTexto: 'Learned to design and operate a modern SOC, analyze logs and process data with Python.',
         experienciaAcademicaUnoTextoDos: 'Applied artificial intelligence and language models to incident analysis, threat detection and automation.',
+        experienciaAcademicaUnoTextoTres: 'Participated in offensive and defensive automation practices using Nmap, Subfinder, playbooks and SOAR.',
         experienciaAcademicaDosPuesto: 'University Cybersecurity and IoT Mission',
         experienciaAcademicaDosTexto: 'Analyzed vulnerabilities in simulated environments and proposed secure architectures to protect data and communications.',
         experienciaAcademicaDosTextoDos: 'Developed IoT solutions applying connectivity, integrity and cybersecurity best practices.',
+        experienciaAcademicaDosTextoTres: 'Participated in practical activities involving information security, the Internet of Things and system protection.',
         certificadosEtiqueta: 'Certificates',
         ampliarCertificado: 'Enlarge',
         habilidadesLenguajes: 'Languages',
@@ -129,43 +150,24 @@ const traducciones = {
         contactoTitulo: 'Let’s Work Together',
         contactoTexto: 'I am interested in opportunities to collaborate on innovative and challenging projects. If you have a proposal, a question or simply want to say hello, feel free to contact me through the form or social networks.',
         nombrePlaceholder: 'Name',
+        nombreEtiqueta: 'Name',
         correoPlaceholder: 'Email Address',
+        correoEtiqueta: 'Email address',
         mensajePlaceholder: 'Your message',
+        mensajeEtiqueta: 'Message',
         enviarMensaje: 'Send Message',
+        enviando: 'Sending…',
+        errorNombre: 'Enter a name between 2 and 50 characters.',
+        errorCorreo: 'Enter a valid email address.',
+        errorMensaje: 'Enter a message between 10 and 500 characters.',
+        errorEnvio: 'The message could not be sent. Please try again.',
+        servicioNoDisponible: 'The form is temporarily unavailable. Please email me instead.',
+        certificadoModalTitulo: 'Enlarged certificate view',
+        cerrar: 'Close',
         mensajeEnviadoTitulo: 'Message Sent!',
         mensajeEnviadoTexto: 'Thank you for contacting me. I will get back to you soon.'
     }
 };
-
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'auto';
-}
-
-function volverAlInicio() {
-    if (window.location.hash) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-    }
-
-    const posicionAnterior = window.scrollY;
-
-    if (posicionAnterior <= 0) return;
-
-    const duracion = 1000;
-    const inicio = performance.now();
-
-    function animarSubida(momentoActual) {
-        const progreso = Math.min((momentoActual - inicio) / duracion, 1);
-        window.scrollTo(0, Math.round(posicionAnterior * (1 - progreso)));
-
-        if (progreso < 1) requestAnimationFrame(animarSubida);
-    }
-
-    requestAnimationFrame(animarSubida);
-}
-
-window.addEventListener('pageshow', () => {
-    requestAnimationFrame(volverAlInicio);
-});
 
 function cambiarIdioma(idioma) {
     const textos = traducciones[idioma];
@@ -182,11 +184,21 @@ function cambiarIdioma(idioma) {
         if (traduccion) elemento.placeholder = traduccion;
     });
 
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((elemento) => {
+        const traduccion = textos[elemento.dataset.i18nAriaLabel];
+        if (traduccion) elemento.setAttribute('aria-label', traduccion);
+    });
+
     document.querySelectorAll('[data-lang]').forEach((boton) => {
         boton.classList.toggle('idioma-activo', boton.dataset.lang === idioma);
     });
     const codigoIdioma = document.querySelector('.idioma-codigo');
     if (codigoIdioma) codigoIdioma.textContent = idioma.toUpperCase();
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+        const abierto = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-label', textos[abierto ? 'cerrarMenu' : 'abrirMenu']);
+    }
     localStorage.setItem('idiomaPreferido', idioma);
 }
 
@@ -200,6 +212,8 @@ function mostrarMensajeExito() {
     
     const contenedorMensaje = document.createElement('div');
     contenedorMensaje.className = 'mensaje-confirmacion';
+    contenedorMensaje.setAttribute('role', 'status');
+    contenedorMensaje.setAttribute('aria-live', 'polite');
     
     const icono = document.createElement('div');
     icono.className = 'icono-check';
@@ -245,7 +259,9 @@ function enviarEmail(formData) {
         to_email: 'manuelgonzalesyactayo@gmail.com'
     };
     
-    return emailjs.send(serviceID, templateID, templateParams, userID)
+    if (!window.emailjs) return Promise.resolve(false);
+
+    return window.emailjs.send(serviceID, templateID, templateParams, userID)
         .then(() => {
             console.log('Email enviado exitosamente a:', templateParams.to_email);
             return true;
@@ -257,9 +273,25 @@ function enviarEmail(formData) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.emailjs) window.emailjs.init('X4_t8wQlEDT9ZzXha');
+
     const idiomaGuardado = localStorage.getItem('idiomaPreferido') || 'es';
     const selectorIdioma = document.querySelector('.selector-idioma');
     const botonIdioma = document.querySelector('.idioma-toggle');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    function cerrarMenu() {
+        navLinks?.classList.remove('abierto');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+        if (menuToggle) menuToggle.setAttribute('aria-label', traducciones[document.documentElement.lang].abrirMenu);
+    }
+
+    menuToggle?.addEventListener('click', () => {
+        const abierto = navLinks?.classList.toggle('abierto') ?? false;
+        menuToggle.setAttribute('aria-expanded', String(abierto));
+        menuToggle.setAttribute('aria-label', traducciones[document.documentElement.lang][abierto ? 'cerrarMenu' : 'abrirMenu']);
+    });
 
     if (botonIdioma && selectorIdioma) {
         botonIdioma.addEventListener('click', () => {
@@ -289,19 +321,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const certificadoModal = document.getElementById('certificadoModal');
     const certificadoModalImagen = document.getElementById('certificadoModalImagen');
     const cerrarCertificadoModal = document.getElementById('cerrarCertificadoModal');
+    let elementoAnteriorAlModal = null;
 
     function abrirCertificado(rutaImagen) {
         if (!certificadoModal || !certificadoModalImagen) return;
+        elementoAnteriorAlModal = document.activeElement;
         certificadoModalImagen.src = rutaImagen;
         certificadoModal.hidden = false;
         document.body.classList.add('modal-abierto');
+        cerrarCertificadoModal?.focus();
     }
 
     function cerrarCertificado() {
-        if (!certificadoModal || !certificadoModalImagen) return;
+        if (!certificadoModal || !certificadoModalImagen || certificadoModal.hidden) return;
         certificadoModal.hidden = true;
         certificadoModalImagen.src = '';
         document.body.classList.remove('modal-abierto');
+        elementoAnteriorAlModal?.focus();
     }
 
     document.querySelectorAll('[data-certificado]').forEach((boton) => {
@@ -314,6 +350,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.addEventListener('keydown', (evento) => {
         if (evento.key === 'Escape') cerrarCertificado();
+        if (evento.key === 'Tab' && certificadoModal && !certificadoModal.hidden) {
+            evento.preventDefault();
+            cerrarCertificadoModal?.focus();
+        }
     });
 
     const formulario = document.getElementById('contactForm');
@@ -322,20 +362,39 @@ document.addEventListener('DOMContentLoaded', function() {
         formulario.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                email: document.getElementById('email').value,
-                mensaje: document.getElementById('mensaje').value
+            const campos = {
+                nombre: document.getElementById('nombre'),
+                email: document.getElementById('email'),
+                mensaje: document.getElementById('mensaje')
             };
-            
-            if (!formData.nombre || !formData.email || !formData.mensaje) {
-                alert('Por favor, completa todos los campos.');
+
+            Object.values(campos).forEach((campo) => {
+                campo.value = campo.value.trim();
+                document.getElementById(`${campo.id}Error`).textContent = '';
+                campo.removeAttribute('aria-invalid');
+            });
+
+            const idioma = document.documentElement.lang || 'es';
+            const errores = {};
+            if (!campos.nombre.validity.valid) errores.nombre = traducciones[idioma].errorNombre;
+            if (!campos.email.validity.valid) errores.email = traducciones[idioma].errorCorreo;
+            if (!campos.mensaje.validity.valid) errores.mensaje = traducciones[idioma].errorMensaje;
+
+            const primerCampoInvalido = Object.keys(errores)[0];
+            Object.entries(errores).forEach(([id, mensaje]) => {
+                document.getElementById(`${id}Error`).textContent = mensaje;
+                campos[id].setAttribute('aria-invalid', 'true');
+            });
+            if (primerCampoInvalido) {
+                campos[primerCampoInvalido].focus();
                 return;
             }
+
+            const formData = Object.fromEntries(Object.entries(campos).map(([id, campo]) => [id, campo.value]));
             
             const botonEnviar = formulario.querySelector('.boton-enviar');
             const textoOriginal = botonEnviar.textContent;
-            botonEnviar.textContent = 'Enviando...';
+            botonEnviar.textContent = traducciones[idioma].enviando;
             botonEnviar.disabled = true;
             
             try {
@@ -345,11 +404,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     mostrarMensajeExito();
                     formulario.reset();
                 } else {
-                    alert('Hubo un error al enviar el mensaje. Inténtalo nuevamente.');
+                    alert(window.emailjs ? traducciones[idioma].errorEnvio : traducciones[idioma].servicioNoDisponible);
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('Hubo un error al enviar el mensaje. Inténtalo nuevamente.');
+                alert(traducciones[idioma].errorEnvio);
             } finally {
                 botonEnviar.textContent = textoOriginal;
                 botonEnviar.disabled = false;
@@ -360,6 +419,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const enlaces = document.querySelectorAll('.nav-links a[href^="#"]');
+    const secciones = [...enlaces]
+        .map((enlace) => document.querySelector(enlace.getAttribute('href')))
+        .filter(Boolean);
+
+    function marcarSeccionActiva(idSeccion) {
+        enlaces.forEach((enlace) => {
+            const activo = enlace.getAttribute('href') === `#${idSeccion}`;
+            enlace.classList.toggle('activo', activo);
+            if (activo) enlace.setAttribute('aria-current', 'location');
+            else enlace.removeAttribute('aria-current');
+        });
+    }
+
+    function detectarSeccionActiva() {
+        const alturaNavbar = document.querySelector('.navbar')?.offsetHeight || 0;
+        const lineaLectura = window.scrollY + alturaNavbar + Math.min(window.innerHeight * 0.28, 220);
+        let seccionActiva = secciones[0];
+
+        secciones.forEach((seccion) => {
+            if (seccion.offsetTop <= lineaLectura) seccionActiva = seccion;
+        });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+            seccionActiva = secciones.at(-1);
+        }
+
+        if (seccionActiva) marcarSeccionActiva(seccionActiva.id);
+    }
+
+    let actualizacionPendiente = false;
+    function solicitarActualizacion() {
+        if (actualizacionPendiente) return;
+        actualizacionPendiente = true;
+        requestAnimationFrame(() => {
+            detectarSeccionActiva();
+            actualizacionPendiente = false;
+        });
+    }
     
     enlaces.forEach(enlace => {
         enlace.addEventListener('click', function(e) {
@@ -369,11 +466,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
+                marcarSeccionActiva(targetSection.id);
+                document.querySelector('.nav-links')?.classList.remove('abierto');
+                const menuToggle = document.querySelector('.menu-toggle');
+                menuToggle?.setAttribute('aria-expanded', 'false');
+                history.pushState(null, '', targetId);
                 targetSection.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
                     block: 'start'
                 });
             }
         });
     });
+
+    detectarSeccionActiva();
+    window.addEventListener('scroll', solicitarActualizacion, { passive: true });
+    window.addEventListener('resize', solicitarActualizacion);
 });

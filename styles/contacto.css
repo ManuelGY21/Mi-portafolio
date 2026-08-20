@@ -96,6 +96,32 @@
     margin-bottom: 1.5rem;
 }
 
+.form-grupo label {
+    color: var(--color-texto);
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.campo-error {
+    color: #ff8992;
+    display: block;
+    font-size: 0.82rem;
+    min-height: 1.2em;
+    padding-top: 5px;
+}
+
+.form-grupo [aria-invalid="true"] {
+    border-color: #ff8992;
+}
+
+.boton-enviar:disabled {
+    cursor: wait;
+    opacity: 0.65;
+    transform: none;
+}
+
 .form-grupo input,
 .form-grupo textarea {
     width: 100%;
