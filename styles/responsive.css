@@ -757,3 +757,92 @@ main > section > div > .titulo-contacto::after {
     .nav-links a { display: block; padding: 12px; }
     .nav-links.abierto { max-height: calc(100dvh - var(--altura-navbar)); overflow-y: auto; }
 }
+
+/* Ajustes visuales para la revisión local. */
+.habilidad-categoria,
+.habilidad-categoria:hover,
+.habilidad-card,
+.habilidad-card:hover,
+.experiencia-seccion,
+.experiencia-seccion:hover {
+    background: transparent;
+    box-shadow: none;
+    border-color: transparent;
+}
+.habilidad-categoria,
+.habilidad-categoria:hover { border-left: 1px solid var(--color-borde); border-radius: 0; }
+.habilidad-categoria:first-child { border-left: 0; }
+.habilidades-terminal-window,
+.cyber-terminal-window { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); }
+.proyecto-card:hover { transform: translateY(-4px); box-shadow: var(--sombra-suave); }
+.proyecto-imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    padding: 0;
+    border: 0;
+    background: #090e13;
+    cursor: zoom-in;
+    text-align: left;
+}
+.proyecto-imagen img { display: block; object-fit: contain; }
+.proyecto-card:hover .proyecto-imagen img { transform: none; }
+.proyecto-imagen:focus-visible { outline-offset: -4px; }
+.experiencia-detalles summary { display: none; }
+.estado-formulario { min-height: 1.6em; margin-top: 16px; line-height: 1.6; color: var(--color-gris); }
+.estado-formulario.exito { color: var(--color-estado); }
+.estado-formulario.error { color: var(--color-resaltado-suave); }
+.boton-enviar:disabled { opacity: 0.65; cursor: wait; }
+@media (max-width: 768px) {
+    .habilidad-categoria,
+    .habilidad-categoria:hover { border-left: 0; border-top: 1px solid var(--color-borde); }
+    .habilidad-categoria:first-child { border-top: 0; }
+    .experiencia-detalles summary {
+        display: list-item;
+        cursor: pointer;
+        color: var(--color-texto);
+        font-size: 0.95rem;
+        padding: 14px 0;
+        min-height: 48px;
+    }
+    .experiencia-detalles summary:focus-visible { outline: 2px solid var(--color-acento); outline-offset: 3px; }
+    .experiencia-lista-cyber { font-size: 1rem; line-height: 1.65; }
+    .experiencia-lista-cyber li { margin-bottom: 12px; }
+}
+.experiencia-seccion-cyber,
+.experiencia-seccion-cyber:hover {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding: 8px 0;
+}
+.experiencia-seccion-cyber + .experiencia-seccion-cyber {
+    border-top: 1px solid var(--color-borde);
+    border-radius: 0;
+    padding-top: 24px;
+}
+
+.verificar-credencial:disabled { opacity: 0.5; cursor: not-allowed; }
+.verificar-credencial:disabled:hover { border-color: var(--color-borde); }
+
+@media (max-width: 768px) {
+    .verificar-credencial {
+        width: 100%;
+        min-height: 48px;
+        font-size: 1rem;
+    }
+    .certificacion-ampliar {
+        width: 40px;
+        height: 40px;
+        font-size: 1.35rem;
+    }
+    .certificado-modal { padding: 16px; }
+    .certificado-modal-cerrar { min-width: 48px; min-height: 48px; }
+}
+
+@media (hover: none) {
+    .proyecto-card:hover,
+    .cert-card-cuadrado:hover,
+    .habilidad-card:hover { transform: none; }
+}

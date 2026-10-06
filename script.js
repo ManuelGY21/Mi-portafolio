@@ -11,11 +11,11 @@ function actualizarAlturaNavbar() {
 actualizarAlturaNavbar();
 if (navbar) new ResizeObserver(actualizarAlturaNavbar).observe(navbar);
 
-// Repetir la entrada cuando una sección vuelve a aparecer en pantalla.
+// Animar solo la primera aparición.
 if ('IntersectionObserver' in window) {
     const observadorSecciones = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
-            entrada.target.classList.toggle('seccion-visible', entrada.isIntersecting);
+            if (entrada.isIntersecting) { entrada.target.classList.add('seccion-visible'); observadorSecciones.unobserve(entrada.target); }
         });
     }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
 
@@ -24,7 +24,7 @@ if ('IntersectionObserver' in window) {
     });
 
     const observadorTarjetas = new IntersectionObserver((entradas) => {
-        entradas.forEach((entrada) => entrada.target.classList.toggle('tarjeta-visible', entrada.isIntersecting));
+        entradas.forEach((entrada) => { if (entrada.isIntersecting) { entrada.target.classList.add('tarjeta-visible'); observadorTarjetas.unobserve(entrada.target); } });
     }, { rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.tarjetas-sobre-mi, .habilidades-categorias, .experiencias-grid, .certificados-grid-cuadrados, .contenedor-proyectos').forEach((grupo) => {
         [...grupo.children].forEach((tarjeta, indice) => {
@@ -36,6 +36,9 @@ if ('IntersectionObserver' in window) {
 
 const traducciones = {
     es: {
+        verDetalles: 'Ver detalles',
+        ampliarProyecto: 'Ampliar captura del proyecto',
+        verificacionPendiente: 'Enlace de verificación pendiente.',
         verificarCredencial: 'Verificar credencial ↗',
         saltarContenido: 'Saltar al contenido',
         abrirMenu: 'Abrir menú',
@@ -61,8 +64,8 @@ const traducciones = {
         terminalItem2: 'Auxiliar en Soporte Técnico — Tinbet',
         terminalItem3: '6 certificaciones: Google, IBM, Microsoft, ITBA',
         terminalItem4: 'Abierto a nuevas oportunidades',
-        botonCvTerminal: 'descargar_cv.pdf',
-        botonContactoTerminal: './contactar',
+        botonCvTerminal: 'Descargar CV',
+        botonContactoTerminal: 'Ver proyectos',
         fotoCaptionTerminal: '// Lima, Perú',
         sobreMiTitulo: 'Sobre Mí',
         quienSoyTitulo: '¿Quién Soy?',
@@ -133,6 +136,9 @@ const traducciones = {
         mensajeEnviadoTexto: 'Gracias por contactarme. Te responderé lo antes posible.'
     },
     en: {
+        verDetalles: 'View details',
+        ampliarProyecto: 'Enlarge project screenshot',
+        verificacionPendiente: 'Verification link pending.',
         verificarCredencial: 'Verify credential ↗',
         saltarContenido: 'Skip to content',
         abrirMenu: 'Open menu',
@@ -158,8 +164,8 @@ const traducciones = {
         terminalItem2: 'Technical Support Assistant — Tinbet',
         terminalItem3: '6 certifications: Google, IBM, Microsoft, ITBA',
         terminalItem4: 'Open to new opportunities',
-        botonCvTerminal: 'download_cv.pdf',
-        botonContactoTerminal: './contact',
+        botonCvTerminal: 'Download CV',
+        botonContactoTerminal: 'View projects',
         fotoCaptionTerminal: '// Lima, Peru',
         sobreMiTitulo: 'About Me',
         quienSoyTitulo: 'Who Am I?',
@@ -411,6 +417,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    const vistaMovil = window.matchMedia('(max-width: 768px)');
+    document.querySelectorAll('.experiencia-contenido-cyber').forEach((contenido) => {
+        const detalles = document.createElement('details');
+        detalles.className = 'experiencia-detalles';
+        const resumen = document.createElement('summary');
+        resumen.dataset.i18n = 'verDetalles';
+        resumen.textContent = 'Ver detalles';
+        contenido.before(detalles);
+        detalles.append(resumen, contenido);
+        const ajustarDetalles = () => { detalles.open = !vistaMovil.matches; };
+        ajustarDetalles();
+        vistaMovil.addEventListener('change', ajustarDetalles);
+    });
     cambiarIdioma(idiomaGuardado);
 
     const certificadoModal = document.getElementById('certificadoModal');
@@ -418,10 +437,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const cerrarCertificadoModal = document.getElementById('cerrarCertificadoModal');
     let elementoAnteriorAlModal = null;
 
-    function abrirCertificado(rutaImagen) {
+    function abrirCertificado(rutaImagen, descripcion = traducciones[document.documentElement.lang].certificadoModalTitulo) {
         if (!certificadoModal || !certificadoModalImagen) return;
         elementoAnteriorAlModal = document.activeElement;
         certificadoModalImagen.src = rutaImagen;
+        certificadoModalImagen.alt = descripcion;
+        const tituloModal = document.getElementById('certificadoModalTitulo');
+        tituloModal.textContent = descripcion;
+        tituloModal.removeAttribute('data-i18n');
         certificadoModal.hidden = false;
         document.body.classList.add('modal-abierto');
         cerrarCertificadoModal?.focus();
@@ -439,6 +462,12 @@ document.addEventListener('DOMContentLoaded', function() {
         boton.addEventListener('click', () => abrirCertificado(boton.dataset.certificado));
     });
 
+    document.querySelectorAll('.proyecto-imagen').forEach((boton) => {
+        boton.addEventListener('click', () => {
+            const imagen = boton.querySelector('img');
+            abrirCertificado(imagen.getAttribute('src'), imagen.alt);
+        });
+    });
     cerrarCertificadoModal?.addEventListener('click', cerrarCertificado);
     certificadoModal?.addEventListener('click', (evento) => {
         if (evento.target === certificadoModal) cerrarCertificado();
@@ -456,7 +485,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (formulario) {
         formulario.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+            if (formulario.querySelector('.boton-enviar').disabled) return;
+            const estado = document.getElementById('estadoFormulario');
+            estado.textContent = '';
+            estado.className = 'estado-formulario';
             const campos = {
                 nombre: document.getElementById('nombre'),
                 email: document.getElementById('email'),
@@ -488,24 +520,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = Object.fromEntries(Object.entries(campos).map(([id, campo]) => [id, campo.value]));
             
             const botonEnviar = formulario.querySelector('.boton-enviar');
-            const textoOriginal = botonEnviar.textContent;
             botonEnviar.textContent = traducciones[idioma].enviando;
             botonEnviar.disabled = true;
+            formulario.setAttribute("aria-busy", "true");
+            estado.textContent = traducciones[idioma].enviando;
             
             try {
                 const exitoso = await enviarEmail(formData);
                 
                 if (exitoso) {
-                    mostrarMensajeExito();
+                    estado.textContent = traducciones[idioma].mensajeEnviadoTexto;
+                    estado.classList.add('exito');
                     formulario.reset();
                 } else {
-                    alert(window.emailjs ? traducciones[idioma].errorEnvio : traducciones[idioma].servicioNoDisponible);
+                    estado.textContent = window.emailjs ? traducciones[idioma].errorEnvio : traducciones[idioma].servicioNoDisponible;
+                    estado.classList.add('error');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert(traducciones[idioma].errorEnvio);
+                estado.textContent = traducciones[idioma].errorEnvio;
+                estado.classList.add('error');
             } finally {
-                botonEnviar.textContent = textoOriginal;
+                botonEnviar.innerHTML = '<span data-i18n="enviarMensaje"></span>';
+                botonEnviar.firstElementChild.textContent = traducciones[document.documentElement.lang].enviarMensaje;
+                formulario.removeAttribute('aria-busy');
                 botonEnviar.disabled = false;
             }
         });

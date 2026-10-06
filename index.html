@@ -128,8 +128,8 @@
                         </div>
                         
                         <div class="terminal-acciones">
-                            <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf?v=2" class="boton-terminal-cv" target="_blank" rel="noopener noreferrer" data-i18n="botonCvTerminal">descargar_cv.pdf</a>
-                            <a href="#contacto" class="boton-terminal-contacto" data-i18n="botonContactoTerminal">./contactar</a>
+                            <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf?v=2" class="boton-terminal-cv" target="_blank" rel="noopener noreferrer" data-i18n="botonCvTerminal">Descargar CV</a>
+                            <a href="#proyectos" class="boton-terminal-contacto" data-i18n="botonContactoTerminal">Ver proyectos</a>
                         </div>
                     </div>
                 </div>
@@ -353,6 +353,7 @@
     <section id="certificados">
         <div class="contenedor-sobre-mi">
             <h2 class="titulo-seccion" data-i18n="certificadosTitulo">Mis Certificaciones</h2>
+            <p class="sr-only" id="verificacionPendiente" data-i18n="verificacionPendiente">Enlace de verificación pendiente.</p>
             <div class="certificados-grid-cuadrados">
                 <!-- Certificado 1: Google Cybersecurity -->
                 <article class="cert-card-cuadrado">
@@ -426,6 +427,7 @@
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoUno">Microsoft Certified: SQL AI Developer Associate</h4>
                         <p class="certificacion-fecha">2026</p>
+                        <button type="button" class="verificar-credencial" disabled aria-describedby="verificacionPendiente" data-i18n="verificarCredencial">Verificar credencial ↗</button>
                     </div>
                 </article>
 
@@ -444,6 +446,7 @@
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoCinco">Certificación Profesional en Ciberseguridad con IA</h4>
                         <p class="certificacion-fecha">2026</p>
+                        <button type="button" class="verificar-credencial" disabled aria-describedby="verificacionPendiente" data-i18n="verificarCredencial">Verificar credencial ↗</button>
                     </div>
                 </article>
 
@@ -462,6 +465,7 @@
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoSeis">Certificado de Ciberseguridad e IoT</h4>
                         <p class="certificacion-fecha">2024</p>
+                        <button type="button" class="verificar-credencial" disabled aria-describedby="verificacionPendiente" data-i18n="verificarCredencial">Verificar credencial ↗</button>
                     </div>
                 </article>
             </div>
@@ -474,9 +478,7 @@
             
             <div class="contenedor-proyectos">
                 <div class="proyecto-card">
-                    <div class="proyecto-imagen">
-                        <img src="images/proyecto1.png" alt="Vista de ProyectVision" loading="lazy" decoding="async">
-                    </div>
+                    <button type="button" class="proyecto-imagen" data-i18n-aria-label="ampliarProyecto" aria-label="Ampliar captura del proyecto"><img src="images/proyecto1.png" alt="Vista de ProyectVision" loading="lazy" decoding="async"><span class="certificacion-ampliar" aria-hidden="true">⛶</span></button>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoUnoTitulo">Realidad aumentada para diseñar ciudades sostenibles</h3>
                         <div class="tecnologias">
@@ -497,9 +499,7 @@
                 </div>
 
                 <div class="proyecto-card">
-                    <div class="proyecto-imagen">
-                        <img src="images/proyecto2.png" alt="Vista de LexiConnect" loading="lazy" decoding="async">
-                    </div>
+                    <button type="button" class="proyecto-imagen" data-i18n-aria-label="ampliarProyecto" aria-label="Ampliar captura del proyecto"><img src="images/proyecto2.png" alt="Vista de LexiConnect" loading="lazy" decoding="async"><span class="certificacion-ampliar" aria-hidden="true">⛶</span></button>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoDosTitulo">Buffet de Abogados</h3>
                         <div class="tecnologias">
@@ -520,9 +520,7 @@
                 </div>
 
                 <div class="proyecto-card">
-                    <div class="proyecto-imagen">
-                        <img src="images/proyecto3.png" alt="Vista del portafolio de Manuel Gonzales" loading="lazy" decoding="async">
-                    </div>
+                    <button type="button" class="proyecto-imagen" data-i18n-aria-label="ampliarProyecto" aria-label="Ampliar captura del proyecto"><img src="images/proyecto3.png" alt="Vista del portafolio de Manuel Gonzales" loading="lazy" decoding="async"><span class="certificacion-ampliar" aria-hidden="true">⛶</span></button>
                     <div class="proyecto-contenido">
                         <h3 data-i18n="proyectoTresTitulo">Mi portafolio</h3>
                         <div class="tecnologias">
@@ -594,6 +592,7 @@
                         <button type="submit" class="boton-enviar">
                             <span data-i18n="enviarMensaje">Enviar Mensaje</span>
                         </button>
+                        <p id="estadoFormulario" class="estado-formulario" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
