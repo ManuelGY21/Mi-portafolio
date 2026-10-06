@@ -92,6 +92,11 @@ body {
     .habilidades-contenedor {
         width: 100%;
     }
+
+    .certificados-grid-grandes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
     
     .habilidades-linea {
         gap: 20px;
@@ -276,6 +281,10 @@ body {
     }
 
     .experiencia-seccion {
+        grid-template-columns: 1fr;
+    }
+
+    .certificados-grid-grandes {
         grid-template-columns: 1fr;
     }
 
