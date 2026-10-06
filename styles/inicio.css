@@ -3,12 +3,12 @@
    ===================================================== */
 
 #inicio {
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-secundario);
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -72,18 +72,18 @@
 }
 
 .terminal-body {
-    padding: 30px 32px;
+    padding: 20px 24px;
     color: var(--color-texto);
 }
 
 .terminal-linea-cmd {
     font-family: monospace;
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: var(--color-gris);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .prompt-dollar {
@@ -97,37 +97,37 @@
 }
 
 .terminal-nombre {
-    font-size: 2.8em;
+    font-size: 2.2em;
     font-weight: 800;
     color: #ffffff;
-    margin: 4px 0 24px 0;
+    margin: 2px 0 16px 0;
     letter-spacing: -0.02em;
     line-height: 1.1;
     font-family: Arial, sans-serif;
 }
 
 .terminal-subtitulo {
-    font-size: 1.3em;
+    font-size: 1.15em;
     color: #ffffff;
     font-weight: 700;
-    margin-bottom: 24px;
-    line-height: 1.4;
+    margin-bottom: 16px;
+    line-height: 1.3;
     font-family: Arial, sans-serif;
 }
 
 .terminal-puntos {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 28px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .terminal-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     font-family: monospace;
-    font-size: 0.92rem;
+    font-size: 0.86rem;
     color: #d1d5db;
 }
 
@@ -201,7 +201,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 380px;
+    max-width: 320px;
 }
 
 .foto-marco {
