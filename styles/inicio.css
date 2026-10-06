@@ -3,12 +3,13 @@
    ===================================================== */
 
 #inicio {
-    min-height: calc(100vh - 64px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-secundario);
-    padding: 30px 20px;
+    box-sizing: border-box;
+    padding: 64px 20px 20px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */

@@ -6,8 +6,9 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: var(--color-secundario);
-    padding: 20px;
+    background-color: var(--color-primario);
+    padding: 64px 20px 20px;
+    box-sizing: border-box;
     justify-content: center;
 }
 
