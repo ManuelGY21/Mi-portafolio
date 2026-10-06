@@ -140,8 +140,8 @@ body {
 
 /* ===== TABLETS PEQUEÑAS (768px y menor) ===== */
 @media (max-width: 768px) {
-    html {
-        scroll-padding-top: 104px;
+    :root {
+        --altura-navbar: 110px;
     }
 
     /* Navegación */
@@ -248,6 +248,7 @@ body {
         width: 100%;
         padding: 16px;
     }
+    .habilidades-categorias {
         column-gap: 18px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -347,8 +348,8 @@ body {
 
 /* ===== MÓVILES (480px y menor) ===== */
 @media (max-width: 480px) {
-    html {
-        scroll-padding-top: 76px;
+    :root {
+        --altura-navbar: 64px;
     }
 
     /* Navegación */
@@ -419,9 +420,7 @@ body {
     
     /* Inicio */
     #inicio {
-        align-items: flex-start;
-        min-height: 100svh;
-        padding: 105px 16px 45px;
+        padding: 20px 16px;
     }
 
     .inicio-contenedor {
@@ -632,4 +631,129 @@ body {
         width: 28px;
         height: 28px;
     }
+}
+
+/* Jerarquía consistente y espacio de lectura en todas las secciones. */
+main > section > div > .titulo-seccion,
+main > section > div > .titulo-contacto {
+    font-size: clamp(1.65rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    margin: 0 0 28px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+main > section > div > .titulo-seccion::after,
+main > section > div > .titulo-contacto::after {
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    main > section[id] {
+        padding: 48px 20px;
+    }
+
+    .contenedor-sobre-mi,
+    .contenedor-experiencia,
+    .inicio-contenedor {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .tarjetas-sobre-mi,
+    .experiencias-grid,
+    .certificados-grid-cuadrados,
+    .contenedor-proyectos {
+        gap: 24px;
+        padding: 0;
+    }
+
+    .tarjeta,
+    .cert-card-cuadrado,
+    .proyecto-contenido,
+    .contacto-formulario {
+        padding: 22px;
+        margin: 0;
+        min-width: 0;
+    }
+
+    .tarjeta p,
+    .proyecto-contenido p,
+    .descripcion-contacto,
+    .experiencia-lista {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .tarjeta h3,
+    .certificacion-card-body h4 {
+        line-height: 1.45;
+        margin-bottom: 10px;
+    }
+
+    .habilidades-terminal-window { margin-top: 12px; }
+    .habilidades-terminal-body { padding: 16px; }
+    .habilidades-categorias {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .habilidad-categoria {
+        min-width: 0;
+        padding: 20px 12px;
+    }
+    .habilidades-linea {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .habilidad-categoria .habilidad-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 90px;
+        padding: 12px 4px;
+    }
+    .habilidad-card p { overflow-wrap: anywhere; }
+    .habilidades-terminal-header {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px;
+    }
+    .habilidades-terminal-header .terminal-title {
+        position: static;
+        transform: none;
+        flex: 1 1 180px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    .cyber-terminal-body { padding: 18px 14px; }
+    .experiencia-seccion { padding: 16px; }
+    .experiencia-lista li { margin-bottom: 12px; }
+    .experiencia-identidad { align-items: flex-start; gap: 12px; }
+    .experiencia-tecnologias { gap: 8px; margin-top: 12px; }
+    .cert-card-cuadrado .certificacion-imagen-boton { height: auto; aspect-ratio: 1.4; }
+    .cert-card-cuadrado .certificacion-imagen { object-fit: contain; }
+    .certificacion-card-body { gap: 10px; }
+    .certificacion-card-body h4 { font-size: 1rem; }
+    .terminal-body { padding: 26px 20px; }
+    .terminal-item { font-size: 0.95rem; line-height: 1.6; }
+    .terminal-acciones { flex-direction: column; gap: 14px; }
+    .boton-terminal-cv,
+    .boton-terminal-contacto,
+    .boton-proyecto,
+    .boton-enviar { min-height: 48px; font-size: 1rem; }
+    .contacto-izquierda { text-align: left; }
+    .redes-sociales-iconos { justify-content: flex-start; }
+    .form-grupo { margin-bottom: 24px; }
+    .form-grupo input,
+    .form-grupo textarea { font-size: 16px; padding: 14px; }
+    .menu-toggle,
+    .idioma-toggle { min-height: 44px; min-width: 44px; }
+    .nav-links a { display: block; padding: 12px; }
+    .nav-links.abierto { max-height: calc(100dvh - var(--altura-navbar)); overflow-y: auto; }
 }

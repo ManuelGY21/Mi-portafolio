@@ -3,24 +3,20 @@
    ===================================================== */
 
 #sobre-mi {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--color-primario);
-    padding: 64px 20px 20px;
     box-sizing: border-box;
     border-bottom: 0;
 }
 
 #experiencia {
-    min-height: 100vh;
     align-items: center;
     background-color: var(--color-secundario);
     display: flex;
     justify-content: center;
-    padding: 64px 20px 20px;
     box-sizing: border-box;
     border-top: 0;
 }
@@ -43,6 +39,13 @@
 
 .contenedor-sobre-mi .titulo-seccion {
     margin-bottom: 18px;
+}
+
+.contenedor-sobre-mi > .titulo-seccion,
+.contenedor-experiencia > .titulo-seccion,
+.contenedor-sobre-mi > .titulo-contacto {
+    align-self: flex-start;
+    text-align: left;
 }
 
 /* ===== TARJETAS SUPERIORES ===== */
@@ -112,7 +115,7 @@
 }
 
 .habilidades-terminal-header .terminal-title {
-    color: var(--color-resaltado-suave);
+    color: #fff;
     font-weight: bold;
 }
 
@@ -571,12 +574,10 @@
 
 /* ===== SECCIÓN DEDICADA DE CERTIFICADOS ===== */
 #certificados {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--color-primario);
-    padding: 64px 20px 20px;
     box-sizing: border-box;
 }
 

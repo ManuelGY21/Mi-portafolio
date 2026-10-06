@@ -13,6 +13,7 @@
 
 /* Variables CSS - Paleta de Colores */
 :root {
+    --altura-navbar: 74px;
     --color-primario: #0b1117;
     --color-secundario: #151d26;
     --color-resaltado: #e63946;
@@ -48,12 +49,16 @@ body {
 }
 
 html {
-    scroll-padding-top: 64px;
+    scroll-padding-top: var(--altura-navbar);
     scroll-behavior: smooth;
 }
 
 section {
     scroll-margin-top: 0;
+}
+
+main {
+    padding-top: var(--altura-navbar);
 }
 
 #inicio,
@@ -62,14 +67,14 @@ section {
 #experiencia,
 #proyectos,
 #contacto {
-    min-height: 100vh;
+    min-height: calc(100vh - var(--altura-navbar));
+    min-height: calc(100dvh - var(--altura-navbar));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding-top: 64px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 /* Colores de fondo por sección - Intercalado Alternado Perfecto */
@@ -147,4 +152,50 @@ section {
 
 .saltar-contenido:focus {
     top: 12px;
+}
+
+@keyframes entrada-seccion {
+    from {
+        opacity: 0.2;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main > section.seccion-visible > div {
+        animation: entrada-seccion 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .tarjeta-visible {
+        animation: entrada-seccion 550ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+        animation-delay: var(--retraso-entrada, 0ms);
+    }
+}
+
+.verificar-credencial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background: var(--color-primario);
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.verificar-credencial { margin-top: auto; }
+.verificar-credencial:hover { border-color: var(--color-resaltado); }
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 4px;
 }

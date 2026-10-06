@@ -2,8 +2,41 @@
 // SCRIPT.JS - Funcionalidad del Portafolio
 // =====================================================
 
+// Una misma medida para el espacio visible y los destinos de navegación.
+const navbar = document.querySelector('.navbar');
+function actualizarAlturaNavbar() {
+    if (!navbar || document.querySelector('.nav-links.abierto')) return;
+    document.documentElement.style.setProperty('--altura-navbar', `${navbar.offsetHeight}px`);
+}
+actualizarAlturaNavbar();
+if (navbar) new ResizeObserver(actualizarAlturaNavbar).observe(navbar);
+
+// Repetir la entrada cuando una sección vuelve a aparecer en pantalla.
+if ('IntersectionObserver' in window) {
+    const observadorSecciones = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            entrada.target.classList.toggle('seccion-visible', entrada.isIntersecting);
+        });
+    }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('main > section').forEach((seccion) => {
+        observadorSecciones.observe(seccion);
+    });
+
+    const observadorTarjetas = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => entrada.target.classList.toggle('tarjeta-visible', entrada.isIntersecting));
+    }, { rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.tarjetas-sobre-mi, .habilidades-categorias, .experiencias-grid, .certificados-grid-cuadrados, .contenedor-proyectos').forEach((grupo) => {
+        [...grupo.children].forEach((tarjeta, indice) => {
+            tarjeta.style.setProperty('--retraso-entrada', `${indice * 80}ms`);
+            observadorTarjetas.observe(tarjeta);
+        });
+    });
+}
+
 const traducciones = {
     es: {
+        verificarCredencial: 'Verificar credencial ↗',
         saltarContenido: 'Saltar al contenido',
         abrirMenu: 'Abrir menú',
         cerrarMenu: 'Cerrar menú',
@@ -100,6 +133,7 @@ const traducciones = {
         mensajeEnviadoTexto: 'Gracias por contactarme. Te responderé lo antes posible.'
     },
     en: {
+        verificarCredencial: 'Verify credential ↗',
         saltarContenido: 'Skip to content',
         abrirMenu: 'Open menu',
         cerrarMenu: 'Close menu',
@@ -531,6 +565,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.nav-links')?.classList.remove('abierto');
                 const menuToggle = document.querySelector('.menu-toggle');
                 menuToggle?.setAttribute('aria-expanded', 'false');
+                actualizarAlturaNavbar();
                 history.pushState(null, '', targetId);
                 targetSection.scrollIntoView({
                     behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',

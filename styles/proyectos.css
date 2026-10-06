@@ -3,11 +3,9 @@
    ===================================================== */
 
 #proyectos {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     background-color: var(--color-secundario);
-    padding: 64px 20px 20px;
     box-sizing: border-box;
     justify-content: center;
     position: relative;
