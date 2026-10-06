@@ -16,7 +16,7 @@
 #experiencia {
     min-height: 100vh;
     align-items: center;
-    background-color: var(--color-primario);
+    background-color: var(--color-secundario);
     display: flex;
     justify-content: center;
     padding: 64px 20px 20px;
