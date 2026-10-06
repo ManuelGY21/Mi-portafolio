@@ -75,8 +75,8 @@ section {
 /* Colores de fondo por sección - Intercalado Alternado Perfecto */
 #inicio { background-color: var(--color-secundario); }
 #sobre-mi { background-color: var(--color-primario); }
-#certificados { background-color: var(--color-secundario); }
-#experiencia { background-color: var(--color-primario); }
+#experiencia { background-color: var(--color-secundario); }
+#certificados { background-color: var(--color-primario); }
 #proyectos { background-color: var(--color-secundario); }
 #contacto { background-color: var(--color-primario); }
 

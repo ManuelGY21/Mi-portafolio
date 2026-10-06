@@ -50,8 +50,8 @@
         <ul class="nav-links" id="menu-principal">
             <li><a href="#inicio" data-i18n="navInicio">Inicio</a></li>
             <li><a href="#sobre-mi" data-i18n="navSobreMi">Sobre Mí</a></li>
-            <li><a href="#certificados" data-i18n="navCertificados">Certificados</a></li>
             <li><a href="#experiencia" data-i18n="navExperiencia">Experiencia</a></li>
+            <li><a href="#certificados" data-i18n="navCertificados">Certificados</a></li>
             <li><a href="#proyectos" data-i18n="navProyectos">Proyectos</a></li>
             <li><a href="#contacto" data-i18n="navContacto">Contacto</a></li>
         </ul>
@@ -136,7 +136,7 @@
             </div>
             <div class="imagen-inicio">
                 <div class="foto-marco">
-                    <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales" width="410" height="410" decoding="async" fetchpriority="high">
+                    <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales" width="440" height="530" decoding="async" fetchpriority="high">
                 </div>
                 <p class="foto-caption" data-i18n="fotoCaptionTerminal">// Lima, Perú</p>
             </div>
@@ -217,174 +217,254 @@
         </div>
     </section>
 
-    <!-- Nuevo apartado independiente de Certificados -->
+    <section id="experiencia">
+        <div class="contenedor-experiencia">
+            <h2 class="titulo-seccion experiencia-titulo" data-i18n="experienciaTitulo">Experiencia</h2>
+            <div class="experiencias-grid">
+                <!-- Columna Izquierda: Experiencia Laboral (Cyber Terminal) -->
+                <div class="experiencia-columna">
+                    <div class="cyber-terminal-window">
+                        <div class="cyber-terminal-header">
+                            <div class="cyber-terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="cyber-terminal-title">sys_audit@tinbet:~ /trayectoria_laboral.log</div>
+                        </div>
+                        <div class="cyber-terminal-body">
+                            <div class="cyber-cmd-line">
+                                <span class="prompt-dollar">$</span> <span class="cmd-texto">audit --target=tinbet --status=active</span>
+                            </div>
+
+                            <div class="experiencia-seccion-cyber">
+                                <div class="experiencia-cabecera-cyber">
+                                    <div class="experiencia-identidad-cyber">
+                                        <div class="cyber-logo-box">
+                                            <img src="images/Tinbet.png" alt="Tinbet" class="experiencia-logo">
+                                        </div>
+                                        <div class="experiencia-meta-cyber">
+                                            <h3 data-i18n="experienciaPuesto">Auxiliar en Soporte Técnico</h3>
+                                            <div class="experiencia-submeta">
+                                                <strong data-i18n="experienciaEmpresa">Tinbet</strong>
+                                                <span class="cyber-badge-date" data-i18n="experienciaFecha">ago. 2026 - actualidad</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="experiencia-tecnologias">
+                                        <span class="cyber-tag">KYC</span>
+                                        <span class="cyber-tag">iGaming</span>
+                                        <span class="cyber-tag">Payments</span>
+                                        <span class="cyber-tag">Customer Support</span>
+                                    </div>
+                                </div>
+                                <div class="experiencia-contenido-cyber">
+                                    <ul class="experiencia-lista-cyber">
+                                        <li data-i18n="experienciaUno"><span class="badge-ok">[ OK ]</span> Gestión y resolución de consultas e incidencias de clientes, verificando información, tickets y movimientos dentro de la plataforma.</li>
+                                        <li data-i18n="experienciaDos"><span class="badge-ok">[ OK ]</span> Validación de <strong>KYC</strong>, retiros, depósitos, apuestas y bonos, asegurando el cumplimiento de los procedimientos y condiciones establecidas.</li>
+                                        <li data-i18n="experienciaTres"><span class="badge-ok">[ OK ]</span> Análisis de operaciones y consultas mediante herramientas internas como <strong>IGP</strong> y <strong>First</strong>, identificando inconsistencias y dando seguimiento a cada caso.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Experiencia Académica (Cyber Terminal) -->
+                <div class="experiencia-columna">
+                    <div class="cyber-terminal-window">
+                        <div class="cyber-terminal-header">
+                            <div class="cyber-terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="cyber-terminal-title">academic_sec@itba:~ /formacion_academica.log</div>
+                        </div>
+                        <div class="cyber-terminal-body">
+                            <div class="cyber-cmd-line">
+                                <span class="prompt-dollar">$</span> <span class="cmd-texto">cat missions_academic.log</span>
+                            </div>
+
+                            <!-- Misión ITBA -->
+                            <div class="experiencia-seccion-cyber">
+                                <div class="experiencia-cabecera-cyber">
+                                    <div class="experiencia-identidad-cyber">
+                                        <div class="cyber-logo-box">
+                                            <img src="images/ITBA.png" alt="ITBA" class="experiencia-logo">
+                                        </div>
+                                        <div class="experiencia-meta-cyber">
+                                            <h3 data-i18n="experienciaAcademicaUnoPuesto">Misión Universitaria de Ciberseguridad con IA</h3>
+                                            <div class="experiencia-submeta">
+                                                <strong>ITBA · Argentina</strong>
+                                                <span class="cyber-badge-date">2026</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="experiencia-tecnologias">
+                                        <span class="cyber-tag">SIEM</span>
+                                        <span class="cyber-tag">Elastic Stack</span>
+                                        <span class="cyber-tag">Python</span>
+                                        <span class="cyber-tag">SOAR</span>
+                                    </div>
+                                </div>
+                                <div class="experiencia-contenido-cyber">
+                                    <ul class="experiencia-lista-cyber">
+                                        <li data-i18n="experienciaAcademicaUnoTexto"><span class="badge-ok">[ OK ]</span> Desarrollé conocimientos en diseño y operación de un SOC moderno, utilizando SIEM, Elastic Stack (ELK), análisis de logs y procesamiento de datos con Python.</li>
+                                        <li data-i18n="experienciaAcademicaUnoTextoDos"><span class="badge-ok">[ OK ]</span> Apliqué inteligencia artificial y modelos de lenguaje (LLMs) para el análisis de incidentes, detección de amenazas y automatización de procesos de seguridad.</li>
+                                        <li data-i18n="experienciaAcademicaUnoTextoTres"><span class="badge-ok">[ OK ]</span> Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Misión Uniandes -->
+                            <div class="experiencia-seccion-cyber" style="margin-top: 24px;">
+                                <div class="experiencia-cabecera-cyber">
+                                    <div class="experiencia-identidad-cyber">
+                                        <div class="cyber-logo-box">
+                                            <img src="images/Uniandes.jpg" alt="Uniandes" class="experiencia-logo">
+                                        </div>
+                                        <div class="experiencia-meta-cyber">
+                                            <h3 data-i18n="experienciaAcademicaDosPuesto">Misión Universitaria de Ciberseguridad e IoT</h3>
+                                            <div class="experiencia-submeta">
+                                                <strong>Universidad de los Andes · Colombia</strong>
+                                                <span class="cyber-badge-date">2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="experiencia-tecnologias">
+                                        <span class="cyber-tag">IoT</span>
+                                        <span class="cyber-tag">Networks</span>
+                                        <span class="cyber-tag">Cybersecurity</span>
+                                    </div>
+                                </div>
+                                <div class="experiencia-contenido-cyber">
+                                    <ul class="experiencia-lista-cyber">
+                                        <li data-i18n="experienciaAcademicaDosTexto"><span class="badge-ok">[ OK ]</span> Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras orientadas a proteger los datos y las comunicaciones.</li>
+                                        <li data-i18n="experienciaAcademicaDosTextoDos"><span class="badge-ok">[ OK ]</span> Desarrollé soluciones IoT mediante la integración de dispositivos, aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
+                                        <li data-i18n="experienciaAcademicaDosTextoTres"><span class="badge-ok">[ OK ]</span> Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Certificados Cuadrados con Cuadro de Logo -->
     <section id="certificados">
         <div class="contenedor-sobre-mi">
             <h2 class="titulo-seccion" data-i18n="certificadosTitulo">Mis Certificaciones</h2>
-            <div class="certificados-grid-grandes">
-                <article class="certificacion-card-grande">
+            <div class="certificados-grid-cuadrados">
+                <!-- Certificado 1: Google Cybersecurity -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="Google">
+                            <svg class="cert-logo-svg" viewBox="0 0 24 24" width="28" height="28"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                        </div>
+                        <div class="cert-empresa-nombre">Google / Coursera</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-google-cybersecurity.png" aria-label="Ampliar certificado de Google Cybersecurity">
                         <img src="images/certificado-google-cybersecurity.png" alt="Certificado Google Cybersecurity Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoCuatro">Google Cybersecurity Professional Certificate</h4>
-                        <p class="certificacion-fecha">Google / Coursera · 2025</p>
+                        <p class="certificacion-fecha">2025</p>
                     </div>
                 </article>
 
-                <article class="certificacion-card-grande">
+                <!-- Certificado 2: IBM IT Support -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="IBM">
+                            <svg class="cert-logo-svg" viewBox="0 0 24 24" width="32" height="18"><path fill="#052FAD" d="M0 4h7v2H0V4zm0 3h7v1H0V7zm0 2h7v2H0V9zm0 3h7v1H0v-1zm0 2h7v2H0v-2zm0 3h7v1H0v-1zm9-13h6v2h-6V4zm0 3h6v1h-6V7zm0 2h6v2h-6V9zm0 3h6v1h-6v-1zm0 2h6v2h-6v-2zm0 3h6v1h-6v-1zm8-13h7v2h-7V4zm0 3h7v1h-7V7zm0 2h7v2h-7V9zm0 3h7v1h-7v-1zm0 2h7v2h-7v-2zm0 3h7v1h-7v-1z"/></svg>
+                        </div>
+                        <div class="cert-empresa-nombre">IBM / Coursera</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-ibm-it-support.png" aria-label="Ampliar certificado de IBM">
                         <img src="images/certificado-ibm-it-support.png" alt="Certificado IBM IT Support Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoDos">IBM IT Support Professional Certificate</h4>
-                        <p class="certificacion-fecha">IBM / Coursera · 2026</p>
+                        <p class="certificacion-fecha">2026</p>
                     </div>
                 </article>
 
-                <article class="certificacion-card-grande">
+                <!-- Certificado 3: Google IT Support -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="Google">
+                            <svg class="cert-logo-svg" viewBox="0 0 24 24" width="28" height="28"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+                        </div>
+                        <div class="cert-empresa-nombre">Google / Coursera</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-google-it-support.png" aria-label="Ampliar certificado de Google IT Support">
                         <img src="images/certificado-google-it-support.png" alt="Certificado Google IT Support Professional" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoTres">Google IT Support Professional Certificate</h4>
-                        <p class="certificacion-fecha">Google / Coursera · 2026</p>
+                        <p class="certificacion-fecha">2026</p>
                     </div>
                 </article>
 
-                <article class="certificacion-card-grande">
+                <!-- Certificado 4: Microsoft -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="Microsoft">
+                            <svg class="cert-logo-svg" viewBox="0 0 23 23" width="26" height="26"><path fill="#f35325" d="M1 1h10v10H1z"/><path fill="#81bc06" d="M12 1h10v10H12z"/><path fill="#05a6f0" d="M1 12h10v10H1z"/><path fill="#ffba08" d="M12 12h10v10H12z"/></svg>
+                        </div>
+                        <div class="cert-empresa-nombre">Microsoft</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-microsoft.jpeg" aria-label="Ampliar certificado de Microsoft">
                         <img src="images/certificado-microsoft.jpeg" alt="Certificado Microsoft SQL AI Developer Associate" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoUno">Microsoft Certified: SQL AI Developer Associate</h4>
-                        <p class="certificacion-fecha">Microsoft · 2026</p>
+                        <p class="certificacion-fecha">2026</p>
                     </div>
                 </article>
 
-                <article class="certificacion-card-grande">
+                <!-- Certificado 5: ITBA -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="ITBA">
+                            <img src="images/ITBA.png" alt="ITBA Logo" class="cert-logo-img">
+                        </div>
+                        <div class="cert-empresa-nombre">ITBA</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-ITBA.png" aria-label="Ampliar certificado de ITBA">
                         <img src="images/certificado-ITBA.png" alt="Certificado de Ciberseguridad con IA de ITBA" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoCinco">Certificación Profesional en Ciberseguridad con IA</h4>
-                        <p class="certificacion-fecha">ITBA · 2026</p>
+                        <p class="certificacion-fecha">2026</p>
                     </div>
                 </article>
 
-                <article class="certificacion-card-grande">
+                <!-- Certificado 6: Uniandes -->
+                <article class="cert-card-cuadrado">
+                    <div class="cert-header-row">
+                        <div class="cert-logo-empresa-box" title="Universidad de los Andes">
+                            <img src="images/Uniandes.jpg" alt="Uniandes Logo" class="cert-logo-img">
+                        </div>
+                        <div class="cert-empresa-nombre">Uniandes</div>
+                    </div>
                     <button type="button" class="certificacion-imagen-boton" data-certificado="images/certificado-UNIANDES.jpg" aria-label="Ampliar certificado de Uniandes">
                         <img src="images/certificado-UNIANDES.jpg" alt="Certificado de Ciberseguridad e IoT de la Universidad de los Andes" class="certificacion-imagen" loading="lazy" decoding="async">
                         <span class="certificacion-ampliar" aria-hidden="true">⛶</span>
                     </button>
                     <div class="certificacion-card-body">
                         <h4 data-i18n="certificadoSeis">Certificado de Ciberseguridad e IoT</h4>
-                        <p class="certificacion-fecha">Universidad de los Andes · 2024</p>
+                        <p class="certificacion-fecha">2024</p>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiencia">
-        <div class="contenedor-experiencia">
-            <h2 class="titulo-seccion experiencia-titulo" data-i18n="experienciaTitulo">Experiencia</h2>
-            <div class="experiencias-grid">
-                <!-- Columna Izquierda: Experiencia Laboral -->
-                <div class="experiencia-columna">
-                    <div class="columna-encabezado-premium">
-                        <div class="columna-icono-box">💼</div>
-                        <div class="columna-info">
-                            <span class="columna-tag" data-i18n="trayectoriaTag">TRAYECTORIA</span>
-                            <h3 data-i18n="experienciaLaboralEtiqueta">Experiencia laboral</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="experiencia-seccion">
-                        <div class="experiencia-cabecera">
-                            <h3 data-i18n="experienciaPuesto">Auxiliar en Soporte Técnico</h3>
-                            <div class="experiencia-detalle">
-                                <div class="experiencia-identidad">
-                                    <img src="images/Tinbet.png" alt="Logo de Tinbet" class="experiencia-logo">
-                                    <div>
-                                        <strong data-i18n="experienciaEmpresa">Tinbet</strong>
-                                        <span data-i18n="experienciaFecha">ago. 2026 - actualidad</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="experiencia-tecnologias"><span>KYC</span><span>iGaming</span><span>Payments</span><span>Customer Support</span></div>
-                        </div>
-                        <div class="experiencia-contenido">
-                            <ul class="experiencia-lista">
-                                <li data-i18n="experienciaUno">Gestión y resolución de consultas e incidencias de clientes, verificando información, tickets y movimientos dentro de la plataforma.</li>
-                                <li data-i18n="experienciaDos">Validación de <strong>KYC</strong>, retiros, depósitos, apuestas y bonos, asegurando el cumplimiento de los procedimientos y condiciones establecidas.</li>
-                                <li data-i18n="experienciaTres">Análisis de operaciones y consultas mediante herramientas internas como <strong>IGP</strong> y <strong>First</strong>, identificando inconsistencias y dando seguimiento a cada caso.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Columna Derecha: Experiencia Académica -->
-                <div class="experiencia-columna">
-                    <div class="columna-encabezado-premium">
-                        <div class="columna-icono-box">🎓</div>
-                        <div class="columna-info">
-                            <span class="columna-tag" data-i18n="formacionTag">FORMACIÓN ACADÉMICA</span>
-                            <h3 data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="experiencia-seccion">
-                        <div class="experiencia-cabecera">
-                            <h3 data-i18n="experienciaAcademicaUnoPuesto">Misión Universitaria de Ciberseguridad con IA</h3>
-                            <div class="experiencia-detalle">
-                                <div class="experiencia-identidad">
-                                    <img src="images/ITBA.png" alt="Logo de ITBA" class="experiencia-logo">
-                                    <div>
-                                        <strong>Instituto Tecnológico de Buenos Aires (ITBA), Argentina</strong>
-                                        <span>2026</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="experiencia-tecnologias"><span>SIEM</span><span>Elastic Stack</span><span>Python</span><span>SOAR</span></div>
-                        </div>
-                        <div class="experiencia-contenido">
-                            <ul class="experiencia-lista">
-                                <li data-i18n="experienciaAcademicaUnoTexto">Desarrollé conocimientos en diseño y operación de un SOC moderno, utilizando SIEM, Elastic Stack (ELK), análisis de logs y procesamiento de datos con Python.</li>
-                                <li data-i18n="experienciaAcademicaUnoTextoDos">Apliqué inteligencia artificial y modelos de lenguaje (LLMs) para el análisis de incidentes, detección de amenazas y automatización de procesos de seguridad.</li>
-                                <li data-i18n="experienciaAcademicaUnoTextoTres">Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experiencia-seccion">
-                        <div class="experiencia-cabecera">
-                            <h3 data-i18n="experienciaAcademicaDosPuesto">Misión Universitaria de Ciberseguridad e IoT</h3>
-                            <div class="experiencia-detalle">
-                                <div class="experiencia-identidad">
-                                    <img src="images/Uniandes.jpg" alt="Logo de Uniandes" class="experiencia-logo">
-                                    <div>
-                                        <strong>Universidad de los Andes, Colombia</strong>
-                                        <span>2024</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="experiencia-tecnologias"><span>IoT</span><span>Networks</span><span>Cybersecurity</span></div>
-                        </div>
-                        <div class="experiencia-contenido">
-                            <ul class="experiencia-lista">
-                                <li data-i18n="experienciaAcademicaDosTexto">Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras orientadas a proteger los datos y las comunicaciones.</li>
-                                <li data-i18n="experienciaAcademicaDosTextoDos">Desarrollé soluciones IoT mediante la integración de dispositivos, aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
-                                <li data-i18n="experienciaAcademicaDosTextoTres">Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
