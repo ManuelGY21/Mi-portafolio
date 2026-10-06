@@ -147,66 +147,101 @@
         <div class="contenedor-sobre-mi">
             <h2 class="titulo-seccion" data-i18n="sobreMiTitulo">Sobre Mí</h2>
 
-            <!-- Tarjetas superiores -->
+            <!-- Tarjetas informativas superiores en cuadros -->
             <div class="tarjetas-sobre-mi">
-                <div class="tarjeta">
-                    <h3><img src="images/quiensoy.png" alt="¿Quién Soy?" class="tarjeta-icono"> <span data-i18n="quienSoyTitulo">¿Quién Soy?</span></h3>
-                    <p>
-                        <span data-i18n="quienSoyTexto">Estudiante de octavo ciclo de Ingeniería de Sistemas de Información en la UPC, orientado a soporte técnico, infraestructura y ciberseguridad.</span>
-                    </p>
+                <div class="tarjeta-cuadro">
+                    <div class="tarjeta-cuadro-header">
+                        <div class="tarjeta-icono-wrapper">
+                            <img src="images/quiensoy.png" alt="¿Quién Soy?" class="tarjeta-icono">
+                        </div>
+                        <h3 data-i18n="quienSoyTitulo">¿Quién Soy?</h3>
+                    </div>
+                    <p data-i18n="quienSoyTexto">Estudiante de octavo ciclo de Ingeniería de Sistemas de Información en la UPC, orientado a soporte técnico, infraestructura y ciberseguridad.</p>
                 </div>
 
-                <div class="tarjeta">
-                    <h3><img src="images/cohete.png" alt="Mi Objetivo" class="tarjeta-icono"> <span data-i18n="objetivoTitulo">Mi Objetivo</span></h3>
-                    <p>
-                        <span data-i18n="objetivoTexto">Desarrollarme en soporte TI, infraestructura y ciberseguridad, aportando soluciones técnicas que generen impacto.</span>
-                    </p>
+                <div class="tarjeta-cuadro">
+                    <div class="tarjeta-cuadro-header">
+                        <div class="tarjeta-icono-wrapper">
+                            <img src="images/cohete.png" alt="Mi Objetivo" class="tarjeta-icono">
+                        </div>
+                        <h3 data-i18n="objetivoTitulo">Mi Objetivo</h3>
+                    </div>
+                    <p data-i18n="objetivoTexto">Desarrollarme en soporte TI, infraestructura y ciberseguridad, aportando soluciones técnicas que generen impacto.</p>
                 </div>
 
-                <div class="tarjeta">
-                    <h3><img src="images/cubo.png" alt="Mi Perfil" class="tarjeta-icono"> <span data-i18n="perfilTitulo">Mi Perfil</span></h3>
-                    <p>
-                        <span data-i18n="perfilTexto">Cuento con formación en diagnóstico de incidencias, Windows, Linux, redes TCP/IP, gestión de usuarios y fundamentos de ITSM.</span>
-                    </p>
+                <div class="tarjeta-cuadro">
+                    <div class="tarjeta-cuadro-header">
+                        <div class="tarjeta-icono-wrapper">
+                            <img src="images/cubo.png" alt="Mi Perfil" class="tarjeta-icono">
+                        </div>
+                        <h3 data-i18n="perfilTitulo">Mi Perfil</h3>
+                    </div>
+                    <p data-i18n="perfilTexto">Cuento con formación en diagnóstico de incidencias, Windows, Linux, redes TCP/IP, gestión de usuarios y fundamentos de ITSM.</p>
                 </div>
             </div>
 
-            <div class="habilidades-contenedor">
-                <h2 class="titulo-habilidades" data-i18n="habilidadesTitulo">Mis Habilidades Técnicas</h2>
-                <div class="habilidades-categorias">
-                    <div class="habilidad-categoria">
-                        <h3 data-i18n="habilidadesLenguajes">Lenguajes</h3>
-                        <div class="habilidades-linea">
+            <!-- Habilidades Técnicas organizadas en cuadros de categoría -->
+            <div class="habilidades-bloque">
+                <h3 class="subtitulo-cuadros" data-i18n="habilidadesTitulo">Mis Habilidades Técnicas</h3>
+                
+                <div class="cuadros-habilidades-grid">
+                    <!-- Cuadro 1: Lenguajes -->
+                    <div class="cuadro-habilidad-categoria">
+                        <div class="cuadro-categoria-header">
+                            <span class="categoria-badge-dot"></span>
+                            <h4 data-i18n="habilidadesLenguajes">Lenguajes</h4>
+                        </div>
+                        <div class="cuadro-habilidades-items">
                             <div class="habilidad-card"><img src="images/Cmasmas.png" alt="C++"><p>C++</p></div>
                             <div class="habilidad-card"><img src="images/Charm.png" alt="C#"><p>C#</p></div>
                             <div class="habilidad-card"><img src="images/python.png" alt="Python"><p>Python</p></div>
                         </div>
                     </div>
-                    <div class="habilidad-categoria">
-                        <h3 data-i18n="habilidadesSistemas">Sistemas</h3>
-                        <div class="habilidades-linea">
+
+                    <!-- Cuadro 2: Sistemas -->
+                    <div class="cuadro-habilidad-categoria">
+                        <div class="cuadro-categoria-header">
+                            <span class="categoria-badge-dot"></span>
+                            <h4 data-i18n="habilidadesSistemas">Sistemas</h4>
+                        </div>
+                        <div class="cuadro-habilidades-items">
                             <div class="habilidad-card"><img src="images/windows.png" alt="Windows"><p>Windows</p></div>
                             <div class="habilidad-card"><img src="images/linux.png" alt="Linux"><p>Linux</p></div>
                         </div>
                     </div>
-                    <div class="habilidad-categoria">
-                        <h3 data-i18n="habilidadesBasesDatos">Bases de datos</h3>
-                        <div class="habilidades-linea">
+
+                    <!-- Cuadro 3: Bases de datos -->
+                    <div class="cuadro-habilidad-categoria">
+                        <div class="cuadro-categoria-header">
+                            <span class="categoria-badge-dot"></span>
+                            <h4 data-i18n="habilidadesBasesDatos">Bases de datos</h4>
+                        </div>
+                        <div class="cuadro-habilidades-items">
                             <div class="habilidad-card"><img src="images/SQL.png" alt="SQL Server"><p>SQL Server</p></div>
                             <div class="habilidad-card"><img src="images/azure-sql.png" alt="Azure SQL"><p>Azure SQL</p></div>
                             <div class="habilidad-card"><img src="images/mongodb.png" alt="MongoDB"><p>MongoDB</p></div>
                         </div>
                     </div>
-                    <div class="habilidad-categoria">
-                        <h3 data-i18n="habilidadesSeguridadCloud">Cloud</h3>
-                        <div class="habilidades-linea">
+
+                    <!-- Cuadro 4: Cloud -->
+                    <div class="cuadro-habilidad-categoria">
+                        <div class="cuadro-categoria-header">
+                            <span class="categoria-badge-dot"></span>
+                            <h4 data-i18n="habilidadesSeguridadCloud">Cloud</h4>
+                        </div>
+                        <div class="cuadro-habilidades-items">
                             <div class="habilidad-card"><img src="images/azure.png" alt="Azure"><p>Azure</p></div>
                             <div class="habilidad-card"><img src="images/aws.png" alt="AWS"><p>AWS</p></div>
                         </div>
                     </div>
-                    <div class="habilidad-categoria">
-                        <h3 data-i18n="habilidadesHerramientas">Herramientas</h3>
-                        <div class="habilidades-linea">
+
+                    <!-- Cuadro 5: Herramientas -->
+                    <div class="cuadro-habilidad-categoria span-column-wide">
+                        <div class="cuadro-categoria-header">
+                            <span class="categoria-badge-dot"></span>
+                            <h4 data-i18n="habilidadesHerramientas">Herramientas</h4>
+                        </div>
+                        <div class="cuadro-habilidades-items">
                             <div class="habilidad-card"><img src="images/git.png" alt="Git"><p>Git</p></div>
                             <div class="habilidad-card"><img src="images/github.png" alt="GitHub" class="logo-github-blanco"><p>GitHub</p></div>
                             <div class="habilidad-card"><img src="images/microsoft-365.png" alt="Microsoft 365"><p>Microsoft 365</p></div>

@@ -37,167 +37,188 @@
     text-align: left;
 }
 
-/* ===== TARJETAS SUPERIORES ===== */
+/* ===== TARJETAS EN CUADROS SUPERIORES ===== */
 .tarjetas-sobre-mi {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 24px;
 }
 
-.tarjeta {
+.tarjeta-cuadro {
     background: var(--color-secundario);
     border: 1px solid var(--color-borde);
-    border-radius: 12px;
-    box-shadow: var(--sombra-suave);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     color: var(--color-texto);
-    width: auto;
-    padding: 16px 18px;
+    padding: 20px 22px;
     position: relative;
     transition: var(--transicion-hover);
+    display: flex;
+    flex-direction: column;
 }
 
-.tarjeta:hover {
-    transform: translateY(-3px);
+.tarjeta-cuadro:hover {
+    transform: translateY(-4px);
     box-shadow: var(--sombra-hover);
-    border-color: rgba(230, 57, 70, 0.4);
+    border-color: var(--color-resaltado);
+}
+
+.tarjeta-cuadro-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-icono-wrapper {
+    width: 40px;
+    height: 40px;
+    background: #0b1117;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .tarjeta-icono {
-    height: 1.2em;
+    height: 22px;
     width: auto;
 }
 
-.tarjeta h3 {
-    font-size: 1.05em;
-    margin-bottom: 8px;
-    color: var(--color-resaltado);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.tarjeta-cuadro h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
 }
 
-.tarjeta p {
-    font-size: 0.88em;
+.tarjeta-cuadro p {
+    font-size: 0.9rem;
     color: var(--color-gris);
-    line-height: 1.45;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/* ===== SECCIÓN DE HABILIDADES ===== */
-.habilidades-contenedor {
-    background: var(--color-secundario);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--sombra-suave);
-    padding: 16px 20px;
-    margin-top: 20px;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/* ===== HABILIDADES TÉCNICAS EN CUADROS POR CATEGORÍA ===== */
+.habilidades-bloque {
+    margin-top: 10px;
 }
 
-.titulo-habilidades {
-    font-size: 1.45em;
-    color: var(--color-resaltado);
-    text-align: center;
-    margin-bottom: 12px;
+.subtitulo-cuadros {
+    font-size: 1.4em;
+    color: white;
+    margin-bottom: 16px;
     position: relative;
     display: inline-block;
 }
 
-.titulo-habilidades::after {
+.subtitulo-cuadros::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 50px;
     height: 3px;
     background-color: var(--color-resaltado);
-    margin: 8px auto 0;
+    margin: 6px 0 0;
     border-radius: 2px;
 }
 
-.habilidades-contenedor .titulo-seccion {
-    font-size: 1.8em;
-    margin-bottom: 30px;
+.cuadros-habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
 }
 
-/* ===== TARJETAS DE HABILIDADES ===== */
-.habilidades-linea {
+.cuadro-habilidad-categoria {
+    background: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: var(--transicion-hover);
+}
+
+.cuadro-habilidad-categoria:hover {
+    border-color: rgba(230, 57, 70, 0.45);
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-3px);
+}
+
+.cuadro-categoria-header {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.categoria-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-resaltado);
+    display: inline-block;
+}
+
+.cuadro-categoria-header h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.cuadro-habilidades-items {
+    display: flex;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.habilidades-categorias {
-    display: grid;
-    gap: 12px 18px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+.habilidad-card {
+    background-color: #0b1117;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 85px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: var(--transicion-hover);
 }
 
-.habilidad-categoria h3 {
+.habilidad-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-resaltado);
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.25);
+}
+
+.habilidad-card img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    margin-bottom: 6px;
+    transition: var(--transicion-hover);
+}
+
+.habilidad-card:hover img {
+    transform: scale(1.12);
+}
+
+.habilidad-card p {
+    font-size: 0.8rem;
     color: var(--color-texto);
-    font-size: 0.88rem;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-.habilidad-categoria .habilidades-linea {
-    gap: 8px;
-}
-
-.habilidad-categoria:nth-child(4),
-.habilidad-categoria:nth-child(5) {
-    margin-top: 8px;
-}
-
-.habilidad-categoria .habilidad-card {
-    padding: 8px;
-    width: 100px;
-}
-
-.habilidad-categoria .habilidad-card img {
-    height: 36px;
-    margin-bottom: 4px;
-    width: 36px;
+    font-weight: 600;
+    margin: 0;
 }
 
 .habilidad-card .logo-github-blanco {
     filter: brightness(0) invert(1);
 }
-
-.habilidad-categoria .habilidad-card p {
-    font-size: 0.78rem;
-}
-
-.habilidad-card {
-    background-color: var(--color-primario);
-    border-radius: 12px;
-    padding: 16px;
-    width: 140px;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-    transition: var(--transicion-hover);
-}
-
-.habilidad-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--sombra-hover);
-}
-
-.habilidad-card img {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 8px;
-    transition: var(--transicion-hover);
-}
-
-.habilidad-card:hover img {
-    transform: scale(1.15);
-    filter: brightness(1.1);
-}
-
-.habilidad-card:hover img.logo-github-blanco {
     filter: brightness(0) invert(1);
 }
 
