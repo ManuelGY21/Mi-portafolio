@@ -354,25 +354,54 @@
     margin-bottom: 18px;
 }
 
-.experiencias-contenedor {
+.experiencias-contenedor,
+.experiencias-grid {
     display: grid;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
 }
 
-.experiencias-contenedor .experiencia-seccion {
+.experiencia-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.columna-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(230, 57, 70, 0.4);
+}
+
+.icono-columna {
+    font-size: 1.4rem;
+}
+
+.columna-encabezado h3 {
+    color: var(--color-texto);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.experiencias-contenedor .experiencia-seccion,
+.experiencia-columna .experiencia-seccion {
     margin-top: 0;
 }
 
 .experiencia-seccion {
     background: var(--color-secundario);
     border: 1px solid var(--color-borde);
-    border-radius: 9px;
+    border-radius: 12px;
     box-shadow: var(--sombra-suave);
     color: var(--color-texto);
-    padding: 26px 28px;
-    display: grid;
-    gap: 28px;
-    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     position: relative;
     overflow: hidden;
     transition: var(--transicion-hover);
@@ -380,7 +409,8 @@
 
 .experiencia-seccion:hover {
     box-shadow: var(--sombra-hover);
-    transform: translateY(-6px);
+    transform: translateY(-4px);
+    border-color: rgba(230, 57, 70, 0.4);
 }
 
 .seccion-etiqueta {
@@ -397,13 +427,17 @@
 }
 
 .experiencia-seccion h3 {
-    font-size: 1.35rem;
-    margin-bottom: 14px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 1.35;
 }
 
 .experiencia-cabecera {
-    border-right: 1px solid rgba(255, 255, 255, 0.12);
-    padding-right: 24px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-right: 0;
+    padding-bottom: 16px;
 }
 
 .experiencia-detalle {

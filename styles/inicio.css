@@ -1,5 +1,5 @@
 /* =====================================================
-   INICIO.CSS - Estilos de la Sección de Inicio
+   INICIO.CSS - Estilos de la Sección de Inicio (Terminal)
    ===================================================== */
 
 #inicio {
@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-secundario);
+    padding: 40px 20px;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
@@ -15,106 +16,225 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 65%;
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1200px;
+    gap: 45px;
 }
 
-/* ===== TEXTO DE PRESENTACIÓN ===== */
-.texto-inicio h1 {
-    font-size: 2.5em;
+/* ===== COLUMNA TERMINAL ===== */
+.terminal-columna {
+    flex: 1.2;
+    min-width: 0;
 }
 
-.texto-inicio h2 {
-    font-size: 1.8em;
-    color: var(--color-gris);
+.terminal-window {
+    background: #111820;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
-/* ===== BOTÓN DE CURRICULUM ===== */
-.boton-cv {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--color-resaltado);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color var(--transicion);
-}
-
-.boton-cv:hover {
-    background-color: var(--color-resaltado);
-}
-
-/* ===== BOTONES DE REDES SOCIALES ===== */
-.botones {
-    margin-top: 20px;
+.terminal-header {
+    background: #0b1117;
+    border-bottom: 1px solid var(--color-borde);
+    padding: 12px 18px;
     display: flex;
-    gap: 15px;
     align-items: center;
+    position: relative;
 }
 
-.botones img {
-    width: 40px;
-    height: auto;
-    filter: brightness(0) invert(1);
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.terminal-title {
+    color: var(--color-gris);
+    font-size: 0.85rem;
+    font-family: monospace;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.terminal-body {
+    padding: 30px 32px;
+    color: var(--color-texto);
+}
+
+.terminal-linea-cmd {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: var(--color-gris);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prompt-dollar {
+    color: var(--color-estado);
+    font-weight: bold;
+}
+
+.cmd-texto {
+    color: var(--color-gris);
+    font-family: monospace;
+}
+
+.terminal-nombre {
+    font-size: 2.8em;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 4px 0 24px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-family: Arial, sans-serif;
+}
+
+.terminal-subtitulo {
+    font-size: 1.3em;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.4;
+    font-family: Arial, sans-serif;
+}
+
+.terminal-puntos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.terminal-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: monospace;
+    font-size: 0.92rem;
+    color: #d1d5db;
+}
+
+.badge-ok {
+    color: var(--color-estado);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.badge-pending {
+    color: var(--color-gris);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.cursor-bloque {
+    display: inline-block;
+    color: var(--color-estado);
+    margin-left: 6px;
+    animation: blink 1s step-start infinite;
+}
+
+.terminal-acciones {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.boton-terminal-cv {
+    background-color: var(--color-resaltado);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: var(--transicion-hover);
+    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.35);
+}
+
+.boton-terminal-cv:hover {
+    background-color: #d62839;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.5);
+}
+
+.boton-terminal-contacto {
+    background: transparent;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
     transition: var(--transicion-hover);
 }
 
-.botones img:hover {
-    transform: scale(1.1);
-    filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(2000%) hue-rotate(340deg) brightness(90%) contrast(90%);
+.boton-terminal-contacto:hover {
+    border-color: var(--color-resaltado);
+    color: var(--color-resaltado);
+    background: rgba(230, 57, 70, 0.08);
+    transform: translateY(-2px);
 }
 
-/* ===== IMAGEN DE PERFIL ===== */
-.imagen-inicio img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: contain;
-    object-position: center;
-    background: var(--color-secundario);
-    border-radius: 12px;
-    display: block;
+/* ===== COLUMNA IMAGEN ===== */
+.imagen-inicio {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
 }
 
 .foto-marco {
     position: relative;
-    width: 410px;
-    padding: 10px;
-    border: 2px solid var(--color-resaltado);
-    border-radius: 18px;
+    width: 100%;
+    padding: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     background: var(--color-primario);
-    box-shadow: 8px 8px 0 rgba(230, 57, 70, 0.2), var(--sombra-suave);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion-hover);
+}
+
+.foto-marco:hover {
+    border-color: var(--color-resaltado);
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.25);
 }
 
 .foto-marco img {
-    background: var(--color-secundario);
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    display: block;
 }
 
 .foto-caption {
     color: var(--color-gris);
-    font-size: 0.8rem;
+    font-family: monospace;
+    font-size: 0.85rem;
     letter-spacing: 0.04em;
     margin-top: 14px;
     text-align: center;
-}
-
-.estado-laboral {
-    align-items: center;
-    color: var(--color-estado);
-    display: flex;
-    font-size: 0.9rem;
-    gap: 8px;
-    margin-top: 14px;
-}
-
-.estado-punto {
-    background: var(--color-estado);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(131, 212, 147, 0.14);
-    height: 9px;
-    width: 9px;
+    opacity: 0.9;
 }

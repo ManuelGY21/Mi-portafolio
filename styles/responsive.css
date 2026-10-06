@@ -56,18 +56,25 @@ body {
     
     /* Inicio */
     .inicio-contenedor {
-        width: 85%;
+        width: 90%;
         flex-direction: column;
-        gap: 2rem;
-        text-align: center;
+        gap: 2.5rem;
     }
     
-    .texto-inicio h1 {
-        font-size: 2.2em;
+    .terminal-columna,
+    .imagen-inicio {
+        width: 100%;
+        max-width: 100%;
     }
-    
+
     .foto-marco {
-        width: 330px;
+        width: 320px;
+    }
+    
+    /* Experiencia */
+    .experiencias-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
     
     /* Sobre Mí */
@@ -180,21 +187,35 @@ body {
     /* Inicio */
     .inicio-contenedor {
         flex-direction: column;
-        width: 95%;
-        gap: 2.5rem;
-        text-align: center;
+        width: 100%;
+        gap: 2rem;
     }
     
-    .texto-inicio h1 {
-        font-size: 1.8em;
+    .terminal-body {
+        padding: 20px 18px;
+    }
+
+    .terminal-nombre {
+        font-size: 2em;
+        margin: 4px 0 16px 0;
     }
     
-    .texto-inicio h2 {
-        font-size: 1.4em;
+    .terminal-subtitulo {
+        font-size: 1.1em;
+        margin-bottom: 18px;
+    }
+
+    .terminal-item {
+        font-size: 0.84rem;
+        gap: 8px;
+    }
+
+    .terminal-acciones {
+        flex-wrap: wrap;
     }
     
     .foto-marco {
-        width: 220px;
+        width: 250px;
     }
     
     .botones {

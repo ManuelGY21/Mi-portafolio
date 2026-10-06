@@ -83,22 +83,61 @@
 
     <section id="inicio">
         <div class="inicio-contenedor">
-            <div class="texto-inicio">
-                <h1><span class="hi" data-i18n="saludo">Hi,</span> <br> <span data-i18n="soy">I'm</span> <span class="resaltado">Manuel</span></h1>
-                <h2><span data-i18n="puestoPrincipal">Estudiante de Ingeniería de Sistemas de Información</span><span class="cursor-parpadeo" aria-hidden="true">|</span></h2>
-                <div class="estado-laboral"><span class="estado-punto"></span><span data-i18n="estadoLaboral">Actualmente trabajando</span></div>
-                <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf?v=2" class="boton-cv" target="_blank" rel="noopener noreferrer" data-i18n="curriculum">Currículum</a>
-                <div class="botones">
-                    <a href="https://www.linkedin.com/in/manuel-gonzales-yactayo-046a35282/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="LinkedIn"></a>
-                    <a href="https://github.com/ManuelGY21" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="GitHub"></a>
-                    <a href="mailto:manuelgonzalesyactayo@gmail.com"><img src="images/gmail.png" alt="Correo electrónico"></a>
+            <div class="terminal-columna">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="terminal-title" data-i18n="terminalTitle">bash — perfil</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-linea-cmd">
+                            <span class="prompt-dollar">$</span> <span class="cmd-texto" data-i18n="whoamiCmd">whoami</span>
+                        </div>
+                        <h1 class="terminal-nombre">Manuel Gonzales</h1>
+                        
+                        <div class="terminal-linea-cmd">
+                            <span class="prompt-dollar">$</span> <span class="cmd-texto" data-i18n="enfoqueCmd">cat enfoque.txt</span>
+                        </div>
+                        <h2 class="terminal-subtitulo">
+                            <span data-i18n="terminalSubtitulo">Soporte TI · Infraestructura · <span class="resaltado">Ciberseguridad</span></span>
+                        </h2>
+                        
+                        <div class="terminal-puntos">
+                            <div class="terminal-item">
+                                <span class="badge-ok">[ OK ]</span>
+                                <span data-i18n="terminalItem1">Ingeniería de Sistemas de Información — UPC</span>
+                            </div>
+                            <div class="terminal-item">
+                                <span class="badge-ok">[ OK ]</span>
+                                <span data-i18n="terminalItem2">Auxiliar en Soporte Técnico — Tinbet</span>
+                            </div>
+                            <div class="terminal-item">
+                                <span class="badge-ok">[ OK ]</span>
+                                <span data-i18n="terminalItem3">6 certificaciones: Google, IBM, Microsoft, ITBA</span>
+                            </div>
+                            <div class="terminal-item terminal-item-estado">
+                                <span class="badge-pending">[ .. ]</span>
+                                <span data-i18n="terminalItem4">Abierto a nuevas oportunidades</span>
+                                <span class="cursor-bloque" aria-hidden="true">█</span>
+                            </div>
+                        </div>
+                        
+                        <div class="terminal-acciones">
+                            <a href="images/Manuel Sebastian Gonzales Yactayo - currículum vítae.pdf?v=2" class="boton-terminal-cv" target="_blank" rel="noopener noreferrer" data-i18n="botonCvTerminal">descargar_cv.pdf</a>
+                            <a href="#contacto" class="boton-terminal-contacto" data-i18n="botonContactoTerminal">./contactar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="imagen-inicio">
                 <div class="foto-marco">
                     <img src="images/perfil.jpg" alt="Foto de perfil de Manuel Gonzales" width="410" height="410" decoding="async" fetchpriority="high">
                 </div>
-                <p class="foto-caption" data-i18n="fotoCaption">Ingeniero de Sistemas en formación</p>
+                <p class="foto-caption" data-i18n="fotoCaptionTerminal">// Lima, Perú</p>
             </div>
         </div>
     </section>
@@ -234,76 +273,89 @@
     <section id="experiencia">
         <div class="contenedor-experiencia">
             <h2 class="titulo-seccion experiencia-titulo" data-i18n="experienciaTitulo">Experiencia</h2>
-            <div class="experiencias-contenedor">
-                <div class="experiencia-seccion">
-                    <div class="experiencia-cabecera">
-                        <div class="seccion-etiqueta" data-i18n="experienciaLaboralEtiqueta">Experiencia laboral</div>
-                        <h3 data-i18n="experienciaPuesto">Auxiliar en Soporte Técnico</h3>
-                        <div class="experiencia-detalle">
-                            <div class="experiencia-identidad">
-                                <img src="images/Tinbet.png" alt="Logo de Tinbet" class="experiencia-logo">
-                                <div>
-                                    <strong data-i18n="experienciaEmpresa">Tinbet</strong>
-                                    <span data-i18n="experienciaFecha">ago. 2026 - actualidad</span>
+            <div class="experiencias-grid">
+                <!-- Columna Izquierda: Experiencia Laboral -->
+                <div class="experiencia-columna">
+                    <div class="columna-encabezado">
+                        <span class="icono-columna" aria-hidden="true">💼</span>
+                        <h3 data-i18n="experienciaLaboralEtiqueta">Experiencia laboral</h3>
+                    </div>
+                    
+                    <div class="experiencia-seccion">
+                        <div class="experiencia-cabecera">
+                            <h3 data-i18n="experienciaPuesto">Auxiliar en Soporte Técnico</h3>
+                            <div class="experiencia-detalle">
+                                <div class="experiencia-identidad">
+                                    <img src="images/Tinbet.png" alt="Logo de Tinbet" class="experiencia-logo">
+                                    <div>
+                                        <strong data-i18n="experienciaEmpresa">Tinbet</strong>
+                                        <span data-i18n="experienciaFecha">ago. 2026 - actualidad</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="experiencia-tecnologias"><span>KYC</span><span>iGaming</span><span>Payments</span><span>Customer Support</span></div>
                         </div>
-                        <div class="experiencia-tecnologias"><span>KYC</span><span>iGaming</span><span>Payments</span><span>Customer Support</span></div>
-                    </div>
-                    <div class="experiencia-contenido">
-                        <ul class="experiencia-lista">
-                            <li data-i18n="experienciaUno">Gestión y resolución de consultas e incidencias de clientes, verificando información, tickets y movimientos dentro de la plataforma.</li>
-                            <li data-i18n="experienciaDos">Validación de <strong>KYC</strong>, retiros, depósitos, apuestas y bonos, asegurando el cumplimiento de los procedimientos y condiciones establecidas.</li>
-                            <li data-i18n="experienciaTres">Análisis de operaciones y consultas mediante herramientas internas como <strong>IGP</strong> y <strong>First</strong>, identificando inconsistencias y dando seguimiento a cada caso.</li>
-                        </ul>
+                        <div class="experiencia-contenido">
+                            <ul class="experiencia-lista">
+                                <li data-i18n="experienciaUno">Gestión y resolución de consultas e incidencias de clientes, verificando información, tickets y movimientos dentro de la plataforma.</li>
+                                <li data-i18n="experienciaDos">Validación de <strong>KYC</strong>, retiros, depósitos, apuestas y bonos, asegurando el cumplimiento de los procedimientos y condiciones establecidas.</li>
+                                <li data-i18n="experienciaTres">Análisis de operaciones y consultas mediante herramientas internas como <strong>IGP</strong> y <strong>First</strong>, identificando inconsistencias y dando seguimiento a cada caso.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experiencia-seccion">
-                    <div class="experiencia-cabecera">
-                        <div class="seccion-etiqueta" data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</div>
-                        <h3 data-i18n="experienciaAcademicaUnoPuesto">Misión Universitaria de Ciberseguridad con IA</h3>
-                        <div class="experiencia-detalle">
-                            <div class="experiencia-identidad">
-                                <img src="images/ITBA.png" alt="Logo de ITBA" class="experiencia-logo">
-                                <div>
-                                    <strong>Instituto Tecnológico de Buenos Aires (ITBA), Argentina</strong>
-                                    <span>2026</span>
+                <!-- Columna Derecha: Experiencia Académica -->
+                <div class="experiencia-columna">
+                    <div class="columna-encabezado">
+                        <span class="icono-columna" aria-hidden="true">🎓</span>
+                        <h3 data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</h3>
+                    </div>
+                    
+                    <div class="experiencia-seccion">
+                        <div class="experiencia-cabecera">
+                            <h3 data-i18n="experienciaAcademicaUnoPuesto">Misión Universitaria de Ciberseguridad con IA</h3>
+                            <div class="experiencia-detalle">
+                                <div class="experiencia-identidad">
+                                    <img src="images/ITBA.png" alt="Logo de ITBA" class="experiencia-logo">
+                                    <div>
+                                        <strong>Instituto Tecnológico de Buenos Aires (ITBA), Argentina</strong>
+                                        <span>2026</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="experiencia-tecnologias"><span>SIEM</span><span>Elastic Stack</span><span>Python</span><span>SOAR</span></div>
                         </div>
-                        <div class="experiencia-tecnologias"><span>SIEM</span><span>Elastic Stack</span><span>Python</span><span>SOAR</span></div>
+                        <div class="experiencia-contenido">
+                            <ul class="experiencia-lista">
+                                <li data-i18n="experienciaAcademicaUnoTexto">Desarrollé conocimientos en diseño y operación de un SOC moderno, utilizando SIEM, Elastic Stack (ELK), análisis de logs y procesamiento de datos con Python.</li>
+                                <li data-i18n="experienciaAcademicaUnoTextoDos">Apliqué inteligencia artificial y modelos de lenguaje (LLMs) para el análisis de incidentes, detección de amenazas y automatización de procesos de seguridad.</li>
+                                <li data-i18n="experienciaAcademicaUnoTextoTres">Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="experiencia-contenido">
-                        <ul class="experiencia-lista">
-                            <li data-i18n="experienciaAcademicaUnoTexto">Desarrollé conocimientos en diseño y operación de un SOC moderno, utilizando SIEM, Elastic Stack (ELK), análisis de logs y procesamiento de datos con Python.</li>
-                            <li data-i18n="experienciaAcademicaUnoTextoDos">Apliqué inteligencia artificial y modelos de lenguaje (LLMs) para el análisis de incidentes, detección de amenazas y automatización de procesos de seguridad.</li>
-                            <li data-i18n="experienciaAcademicaUnoTextoTres">Participé en prácticas de automatización ofensiva y defensiva mediante Nmap, Subfinder, playbooks y SOAR, integrando SIEM, IA y respuesta ante incidentes.</li>
-                        </ul>
-                    </div>
-                </div>
 
-                <div class="experiencia-seccion">
-                    <div class="experiencia-cabecera">
-                        <div class="seccion-etiqueta" data-i18n="experienciaAcademicaEtiqueta">Experiencia académica</div>
-                        <h3 data-i18n="experienciaAcademicaDosPuesto">Misión Universitaria de Ciberseguridad e IoT</h3>
-                        <div class="experiencia-detalle">
-                            <div class="experiencia-identidad">
-                                <img src="images/Uniandes.jpg" alt="Logo de Uniandes" class="experiencia-logo">
-                                <div>
-                                    <strong>Universidad de los Andes, Colombia</strong>
-                                    <span>2024</span>
+                    <div class="experiencia-seccion">
+                        <div class="experiencia-cabecera">
+                            <h3 data-i18n="experienciaAcademicaDosPuesto">Misión Universitaria de Ciberseguridad e IoT</h3>
+                            <div class="experiencia-detalle">
+                                <div class="experiencia-identidad">
+                                    <img src="images/Uniandes.jpg" alt="Logo de Uniandes" class="experiencia-logo">
+                                    <div>
+                                        <strong>Universidad de los Andes, Colombia</strong>
+                                        <span>2024</span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="experiencia-tecnologias"><span>IoT</span><span>Networks</span><span>Cybersecurity</span></div>
                         </div>
-                        <div class="experiencia-tecnologias"><span>IoT</span><span>Networks</span><span>Cybersecurity</span></div>
-                    </div>
-                    <div class="experiencia-contenido">
-                        <ul class="experiencia-lista">
-                            <li data-i18n="experienciaAcademicaDosTexto">Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras orientadas a proteger los datos y las comunicaciones.</li>
-                            <li data-i18n="experienciaAcademicaDosTextoDos">Desarrollé soluciones IoT mediante la integración de dispositivos, aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
-                            <li data-i18n="experienciaAcademicaDosTextoTres">Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
-                        </ul>
+                        <div class="experiencia-contenido">
+                            <ul class="experiencia-lista">
+                                <li data-i18n="experienciaAcademicaDosTexto">Analicé vulnerabilidades en entornos simulados y propuse arquitecturas seguras orientadas a proteger los datos y las comunicaciones.</li>
+                                <li data-i18n="experienciaAcademicaDosTextoDos">Desarrollé soluciones IoT mediante la integración de dispositivos, aplicando buenas prácticas de conectividad, integridad y ciberseguridad.</li>
+                                <li data-i18n="experienciaAcademicaDosTextoTres">Participé en actividades académicas y prácticas relacionadas con seguridad informática, Internet de las Cosas y protección de sistemas tecnológicos.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
