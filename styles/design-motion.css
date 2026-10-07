@@ -43,8 +43,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .idioma-opciones { background: #171d1f; border-color: #4b5555; box-shadow: 0 10px 26px rgba(0,0,0,.25); }
 
 /* Ritmo y encabezados */
-#inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto { min-height: 0; padding-block: 92px; }
-#inicio { min-height: min(800px, calc(100vh - var(--altura-navbar))); background: radial-gradient(circle at 78% 42%, rgba(117,145,136,.08), transparent 36%), var(--color-secundario); }
+main > :is(#inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto) {
+    min-height: calc(100vh - var(--altura-navbar));
+    min-height: calc(100dvh - var(--altura-navbar));
+    padding: clamp(24px, 4dvh, 48px) 20px;
+    width: 100%;
+}
+main > section[id] > div { max-width: min(1240px, 100%); min-width: 0; }
+#inicio { background: radial-gradient(circle at 78% 42%, rgba(117,145,136,.08), transparent 36%), var(--color-secundario); }
 .titulo-seccion, .titulo-contacto { font-size: clamp(2.25rem, 3.6vw, 3.35rem); letter-spacing: -.035em; font-weight: 600; line-height: 1.1; margin-bottom: 32px; }
 .titulo-seccion::after, .titulo-contacto::after { width: 44px; height: 2px; margin-top: 14px; background: var(--color-resaltado); box-shadow: none; }
 .contenedor-sobre-mi, .contenedor-experiencia { max-width: 1240px; }
@@ -75,7 +81,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .imagen-inicio { max-width: 410px; }
 .foto-marco { padding: 9px; background: #0c1113; border: 1px solid #41504f; border-radius: 12px; box-shadow: 0 24px 54px rgba(0,0,0,.25); transition: transform .4s cubic-bezier(.2,.7,.2,1), border-color .3s ease, box-shadow .3s ease; }
 .foto-marco:hover { transform: translateY(-5px) rotate(.5deg); border-color: #82988a; box-shadow: 0 30px 58px rgba(0,0,0,.32); }
-.foto-marco img { height: 500px; border-radius: 7px; image-rendering: auto; }
+.foto-marco img { height: clamp(260px, calc(100dvh - var(--altura-navbar) - 130px), 500px); border-radius: 7px; image-rendering: auto; }
 .foto-caption { color: #aeb9b6; font-size: .78rem; }
 
 /* Tarjetas y paneles */
@@ -112,6 +118,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .experiencia-lista-cyber { color: #c5d0d0; }
 .cyber-tag, .cyber-badge-date, .tech-tag { background: rgba(255,255,255,.055); border: 1px solid #3c4849; border-radius: 9999px; color: #d2dcdc; box-shadow: none; }
 .certificados-grid-cuadrados { gap: 14px; }
+#certificados .certificados-grid-cuadrados { margin-top: 8px; }
+#certificados .cert-card-cuadrado { padding: 12px; gap: 8px; }
+#certificados .cert-card-cuadrado .certificacion-imagen-boton { height: clamp(92px, 14dvh, 125px); }
 .cert-header-row { background: #151d20; }
 .certificacion-imagen-boton { background: #1b2527; }
 .certificacion-card-body h4 { color: #f2f5f3; font-weight: 590; }
@@ -190,8 +199,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .imagen-inicio { max-width: 360px; }
     .foto-marco { width: 100%; }
 }
+@media (min-width: 900px) and (max-width: 1024px) {
+    #certificados .certificados-grid-cuadrados,
+    #proyectos .contenedor-proyectos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 @media (max-width: 768px) {
-    #inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto { padding-block: 72px; }
+    main > :is(#inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto) { padding: 42px 20px; }
+    main > section[id] > div { width: 100%; }
+    #certificados .cert-card-cuadrado { padding: 18px; gap: 12px; }
+    #certificados .cert-card-cuadrado .certificacion-imagen-boton { height: auto; aspect-ratio: 1.4; }
     .navbar { padding: 12px 0; }
     .navbar-contenedor { grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; }
     .nav-izquierda { grid-column: 1; grid-row: 1; }
@@ -205,7 +221,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .imagen-inicio { margin-inline: auto; }
 }
 @media (max-width: 520px) {
-    #inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto { padding: 62px 18px; }
+    main > :is(#inicio, #sobre-mi, #experiencia, #certificados, #proyectos, #contacto) { padding: 32px 18px; }
     .navbar-contenedor { padding-inline: 18px; }
     .nav-derecha > a { display: none; }
     .nav-izquierda .logo { font-size: 19px; white-space: nowrap; }
@@ -214,7 +230,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .nav-derecha { margin-right: 58px; }
     .terminal-acciones { gap: 9px; }
     .boton-terminal-cv, .boton-terminal-contacto { width: 100%; }
-    .foto-marco img { height: 420px; }
+    .foto-marco img { height: 100%; }
     .titulo-seccion, .titulo-contacto { font-size: 2.2rem; }
     .contacto-formulario { padding: 22px; }
 }
