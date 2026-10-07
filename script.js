@@ -28,7 +28,7 @@ if ('IntersectionObserver' in window) {
     }, { rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.tarjetas-sobre-mi, .habilidades-categorias, .experiencias-grid, .certificados-grid-cuadrados, .contenedor-proyectos').forEach((grupo) => {
         [...grupo.children].forEach((tarjeta, indice) => {
-            tarjeta.style.setProperty('--retraso-entrada', `${indice * 80}ms`);
+            tarjeta.style.setProperty('--retraso-entrada', `${indice * 55}ms`);
             observadorTarjetas.observe(tarjeta);
         });
     });
@@ -38,6 +38,9 @@ const traducciones = {
     es: {
         verDetalles: 'Ver detalles',
         ampliarProyecto: 'Ampliar captura del proyecto',
+        ampliarProyectVision: 'Ampliar captura de ProyectVision',
+        ampliarLexiConnect: 'Ampliar captura de LexiConnect',
+        ampliarPortafolio: 'Ampliar captura de mi portafolio',
         verificacionPendiente: 'Enlace de verificación pendiente.',
         verificarCredencial: 'Verificar credencial ↗',
         saltarContenido: 'Saltar al contenido',
@@ -138,6 +141,9 @@ const traducciones = {
     en: {
         verDetalles: 'View details',
         ampliarProyecto: 'Enlarge project screenshot',
+        ampliarProyectVision: 'Enlarge ProyectVision screenshot',
+        ampliarLexiConnect: 'Enlarge LexiConnect screenshot',
+        ampliarPortafolio: 'Enlarge my portfolio screenshot',
         verificacionPendiente: 'Verification link pending.',
         verificarCredencial: 'Verify credential ↗',
         saltarContenido: 'Skip to content',
@@ -406,6 +412,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 botonIdioma.setAttribute('aria-expanded', 'false');
             }
         });
+        selectorIdioma.addEventListener('focusout', (evento) => {
+            if (!selectorIdioma.contains(evento.relatedTarget)) {
+                selectorIdioma.classList.remove('abierto');
+                botonIdioma.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 
     document.querySelectorAll('[data-lang]').forEach((boton) => {
@@ -465,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.proyecto-imagen').forEach((boton) => {
         boton.addEventListener('click', () => {
             const imagen = boton.querySelector('img');
-            abrirCertificado(imagen.getAttribute('src'), imagen.alt);
+            abrirCertificado(imagen.dataset.imagenCompleta || imagen.getAttribute('src'), imagen.alt);
         });
     });
     cerrarCertificadoModal?.addEventListener('click', cerrarCertificado);
@@ -473,7 +485,17 @@ document.addEventListener('DOMContentLoaded', function() {
         if (evento.target === certificadoModal) cerrarCertificado();
     });
     document.addEventListener('keydown', (evento) => {
-        if (evento.key === 'Escape') cerrarCertificado();
+        if (evento.key === 'Escape') {
+            if (certificadoModal && !certificadoModal.hidden) cerrarCertificado();
+            else if (selectorIdioma?.classList.contains('abierto')) {
+                selectorIdioma.classList.remove('abierto');
+                botonIdioma?.setAttribute('aria-expanded', 'false');
+                botonIdioma?.focus();
+            } else if (navLinks?.classList.contains('abierto')) {
+                cerrarMenu();
+                menuToggle?.focus();
+            }
+        }
         if (evento.key === 'Tab' && certificadoModal && !certificadoModal.hidden) {
             evento.preventDefault();
             cerrarCertificadoModal?.focus();
